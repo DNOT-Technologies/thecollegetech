@@ -52,10 +52,10 @@ export default function Home() {
             <div className="flex flex-col gap-10 px-4 py-10 @container">
               <div className="flex flex-col gap-4">
                 <h1 className="text-[#101518] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-                  Why Choose TheCollegeTech?
+                  Why Choose TCT?
                 </h1>
                 <p className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">
-                  We offer a comprehensive suite of technology solutions designed to enhance the college experience for students, faculty, and administrators.
+                  TCT offers a comprehensive suite of technology solutions designed to enhance the college experience for students, faculty, and administrators.
                 </p>
               </div>
               <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-0">
@@ -335,7 +335,7 @@ export default function Home() {
                   </div>
                 </a>
               </div>
-              <p className="text-[#5c748a] text-base font-normal leading-normal">© 2023 TheCollegeTech. All rights reserved.</p>
+              <p className="text-[#5c748a] text-base font-normal leading-normal">© 2025 TheCollegeTech. All rights reserved.</p>
             </footer>
           </div>
         </footer>
