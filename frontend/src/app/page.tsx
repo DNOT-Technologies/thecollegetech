@@ -115,41 +115,118 @@ export default function Home() {
                   We are proud to serve a diverse range of educational institutions, from small colleges to large universities.
                 </p>
               </div>
-              <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
-                {/* Product 1 */}
-                <div className="flex flex-col gap-3 pb-3">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{ backgroundImage: `url('nitw.png')` }}
-                  ></div>
-                  <div>
-                    <p className="text-[#101518] text-base font-medium leading-normal">NIT Warangal</p>
-                    <p className="text-[#5c748a] text-sm font-normal leading-normal">NIT Warangal is a premier institution in India, known for its cutting-edge research and innovative teaching methods.</p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 py-4">
+                {/* Client 1 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/bits-min.png" alt="BITS Pilani" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">BITS Pilani</div>
                 </div>
-                {/* Product 2 */}
-                <div className="flex flex-col gap-3 pb-3">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMeaxNcWO766h-HYrSKsq2WTKKLNC1kh-rqBW03EOb7o-VS6nLV6iNdwqUWw9lv_zLnWvRhQgwLYHadrSPxCIv6SPHNCtiCGXA6WyqeY_H8UeRbr9ru86xsNERY53noBSCn5iIOt-DopS9Ko6_GVJ-yzkpZiZ_lEZHfFmyTYy9l0PCAaet-hz8U5R4YB_HRMmUUMZfDd-FnCGjoJ-QMFpcf9COea7_bEf_WG9ss06RzsLkGAzDOEVI62AsI554c46BXAjgcm5nIi8d')` }}
-                  ></div>
-                  <div>
-                    <p className="text-[#101518] text-base font-medium leading-normal">Vidya LMS</p>
-                    <p className="text-[#5c748a] text-sm font-normal leading-normal">Enhance learning with Vidya LMS, our comprehensive learning management system.</p>
+                {/* Client 2 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/iima-min.webp" alt="IIM Ahmedabad" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">IIM Ahmedabad</div>
                 </div>
-                {/* Product 3 */}
-                <div className="flex flex-col gap-3 pb-3">
-                  <div
-                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZYkGTzwMejnXKfmpamJytFQK2oXwIYLYm_TsIX_b1tL3e9jE7u3kGiunOzWjmjnDWzDwYUoagcbRtVfOr4AMIv33WWqBaAhhGv2Jviu0kM5vYG-Mp4mHDw_TzXXvdzXbZTmqva6UDQE7fDWd2ck-Rm5wHYKB6D3gvXu7HQh1yggw0xmqU4DE7RruZtm3TsUq2XKxzZrGdS3ctx-y54CszX-qjEg0dx6GuHEiN7jWYGTqizAAbFC4CQwZyLXUkbMdx_q3sMeZQbNZJ')` }}
-                  ></div>
-                  <div>
-                    <p className="text-[#101518] text-base font-medium leading-normal">IT Services</p>
-                    <p className="text-[#5c748a] text-sm font-normal leading-normal">
-                      We provide a range of IT services, including infrastructure management, cybersecurity, and technical support.
-                    </p>
+                {/* Client 3 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/iimcal-min.webp" alt="IIM Calcutta" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">IIM Calcutta</div>
+                </div>
+                {/* Client 4 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/vnit-logo.webp" alt="VNIT, Nagpur" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">VNIT, Nagpur</div>
+                </div>
+                {/* Client 5 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/srm-logo.webp" alt="SRM University" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">SRM University</div>
+                </div>
+                {/* Client 6 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/nmims-min.png" alt="NMIMS" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">NMIMS</div>
+                </div>
+                {/* Client 7 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/spjain-min.webp" alt="SP Jain" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">SP Jain</div>
+                </div>
+                {/* Client 8 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/bml-munjal-min.png" alt="BML" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">BML</div>
+                </div>
+                {/* Client 9 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/ashoka-min.png" alt="Ashoka University" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">Ashoka University</div>
+                </div>
+                {/* Client 10 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/Medicaps-UniversityLogo.webp" alt="Medicaps University" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px] text-center">Medicaps University</div>
+                </div>
+                {/* Client 11 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/raisoni-min.png" alt="Raisoni Group" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">Raisoni Group</div>
+                </div>
+                {/* Client 12 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/iitropar-min.jpg" alt="IIT Ropar" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">IIT Ropar</div>
+                </div>
+                {/* Client 13 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/upes-logo.webp" alt="UPES" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">UPES</div>
+                </div>
+                {/* Client 14 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/IIT_Kanpur_Logo.svg" alt="IIT Kanpur" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">IIT Kanpur</div>
+                </div>
+                {/* Client 15 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/manipal-logo.webp" alt="Manipal, Jaipur" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">Manipal, Jaipur</div>
+                </div>
+                {/* Client 16 */}
+                <div className="flex flex-col items-center">
+                  <div className="w-20 h-20 flex items-center justify-center mb-2">
+                    <Image src="https://joinsuperset.com/img/iit_patna_logo.png" alt="IIT Patna" width={80} height={80} className="object-contain" loading="lazy" />
+                  </div>
+                  <div className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">IIT Patna</div>
                 </div>
               </div>
             </div>
