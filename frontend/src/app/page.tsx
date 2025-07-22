@@ -8,23 +8,7 @@ export default function Home() {
     >
       <div className="layout-container flex h-full grow flex-col">
         <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaedf1] px-10 py-3">
-          <div className="flex items-center gap-4 text-[#101518]">
-            <div className="size-4">
-              {/* Logo SVG */}
-              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_6_319)">
-                  <path
-                    d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
-                    fill="currentColor"
-                  ></path>
-                </g>
-                <defs>
-                  <clipPath id="clip0_6_319">
-                    <rect width="48" height="48" fill="white"></rect>
-                  </clipPath>
-                </defs>
-              </svg>
-            </div>
+          <div className="flex items-center gap-4 text-[#101518]">  
             <h2 className="text-[#101518] text-lg font-bold leading-tight tracking-[-0.015em]">TheCollegeTech</h2>
           </div>
           <div className="flex flex-1 justify-end gap-8">
@@ -117,6 +101,53 @@ export default function Home() {
                     <h2 className="text-[#101518] text-base font-bold leading-tight">Dedicated Support</h2>
                     <p className="text-[#5c748a] text-sm font-normal leading-normal">
                       Our dedicated support team is available to assist with implementation, training, and ongoing maintenance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-10 px-4 py-10 @container">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-[#101518] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  Our Clients
+                </h1>
+                <p className="text-[#101518] text-base font-normal leading-normal max-w-[720px]">
+                  We are proud to serve a diverse range of educational institutions, from small colleges to large universities.
+                </p>
+              </div>
+              <div className="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
+                {/* Product 1 */}
+                <div className="flex flex-col gap-3 pb-3">
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{ backgroundImage: `url('nitw.png')` }}
+                  ></div>
+                  <div>
+                    <p className="text-[#101518] text-base font-medium leading-normal">NIT Warangal</p>
+                    <p className="text-[#5c748a] text-sm font-normal leading-normal">NIT Warangal is a premier institution in India, known for its cutting-edge research and innovative teaching methods.</p>
+                  </div>
+                </div>
+                {/* Product 2 */}
+                <div className="flex flex-col gap-3 pb-3">
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBMeaxNcWO766h-HYrSKsq2WTKKLNC1kh-rqBW03EOb7o-VS6nLV6iNdwqUWw9lv_zLnWvRhQgwLYHadrSPxCIv6SPHNCtiCGXA6WyqeY_H8UeRbr9ru86xsNERY53noBSCn5iIOt-DopS9Ko6_GVJ-yzkpZiZ_lEZHfFmyTYy9l0PCAaet-hz8U5R4YB_HRMmUUMZfDd-FnCGjoJ-QMFpcf9COea7_bEf_WG9ss06RzsLkGAzDOEVI62AsI554c46BXAjgcm5nIi8d')` }}
+                  ></div>
+                  <div>
+                    <p className="text-[#101518] text-base font-medium leading-normal">Vidya LMS</p>
+                    <p className="text-[#5c748a] text-sm font-normal leading-normal">Enhance learning with Vidya LMS, our comprehensive learning management system.</p>
+                  </div>
+                </div>
+                {/* Product 3 */}
+                <div className="flex flex-col gap-3 pb-3">
+                  <div
+                    className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
+                    style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZYkGTzwMejnXKfmpamJytFQK2oXwIYLYm_TsIX_b1tL3e9jE7u3kGiunOzWjmjnDWzDwYUoagcbRtVfOr4AMIv33WWqBaAhhGv2Jviu0kM5vYG-Mp4mHDw_TzXXvdzXbZTmqva6UDQE7fDWd2ck-Rm5wHYKB6D3gvXu7HQh1yggw0xmqU4DE7RruZtm3TsUq2XKxzZrGdS3ctx-y54CszX-qjEg0dx6GuHEiN7jWYGTqizAAbFC4CQwZyLXUkbMdx_q3sMeZQbNZJ')` }}
+                  ></div>
+                  <div>
+                    <p className="text-[#101518] text-base font-medium leading-normal">IT Services</p>
+                    <p className="text-[#5c748a] text-sm font-normal leading-normal">
+                      We provide a range of IT services, including infrastructure management, cybersecurity, and technical support.
                     </p>
                   </div>
                 </div>
@@ -235,3 +266,5 @@ export default function Home() {
     </div>
   );
 }
+
+
