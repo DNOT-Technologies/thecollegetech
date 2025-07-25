@@ -290,10 +290,10 @@ export default function Home() {
               </div>
               <div className="max-w-4xl mx-auto">
                 <div className="glass-card rounded-2xl p-8 relative">
-                  <div className="text-6xl text-[var(--color-primary-violet)]/20 absolute top-4 left-6">"</div>
+                  <div className="text-6xl text-[var(--color-primary-violet)]/20 absolute top-4 left-6">&quot;</div>
                   <div className="pt-8">
                     <p className="text-[var(--color-primary-violet)] mathco-body text-lg mb-8 leading-relaxed">
-                      TheCollegeTech has revolutionized our placement process. With Placeeasy, we've seen a 40% increase in successful placements and significantly improved student satisfaction. Their platform seamlessly connects our students with top-tier companies.
+                      TheCollegeTech has revolutionized our placement process. With Placeeasy, we&rsquo;ve seen a 40% increase in successful placements and significantly improved student satisfaction. Their platform seamlessly connects our students with top-tier companies.
                     </p>
                     <div className="flex items-center justify-center gap-4">
                       <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
