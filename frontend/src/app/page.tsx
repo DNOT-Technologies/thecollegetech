@@ -27,12 +27,12 @@ export default function Home() {
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:nikhil@thecollegetech.com">
+                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:nikhil@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
-              <a href="mailto:nikhil@thecollegetech.com" className="mathco-button-primary flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]">
+              <a href="mailto:nikhil@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Get Started</span>
               </a>
             </div>
@@ -418,7 +418,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                  <a href="mailto:nikhil@thecollegetech.com" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 text-base font-bold leading-normal tracking-[0.015em]">
+                  <a href="mailto:nikhil@thecollegetech.com?subject=Ready%20to%20Transform%20Our%20Institution%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 text-base font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Get Started Today</span>
                   </a>
                   <a href="https://calendly.com/nikhiltirunagiri/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-[var(--color-primary-violet)] text-[var(--color-primary-violet)] hover:bg-[var(--color-primary-violet)] hover:text-white transition-all duration-300 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 text-base font-bold leading-normal tracking-[0.015em]">
