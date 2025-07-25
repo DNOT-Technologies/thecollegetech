@@ -22,6 +22,29 @@
   --foreground: var(--color-neutral-dark);
 }
 
+/* Dark Mode Colors */
+.dark {
+  /* Dark MathCo Color System - Enhanced */
+  --color-primary-violet: #C4B5FD;
+  --color-indigo-start: #A78BFA;
+  --color-indigo-end: #DDD6FE;
+  --color-accent-mint: #F6B5BB;
+  --color-teal: #F6B5BB;
+  --color-soft-lilac: #2D1B69;
+  --color-neutral-light: #0F0F1A;
+  --color-neutral-medium: #374151;
+  --color-neutral-dark: #F8FAFC;
+  
+  /* Dark Gradients */
+  --gradient-primary: linear-gradient(45deg, var(--color-primary-violet) 0%, var(--color-indigo-end) 100%);
+  --gradient-primary-reverse: linear-gradient(45deg, var(--color-indigo-end) 0%, var(--color-primary-violet) 100%);
+  --gradient-mint-teal: linear-gradient(90deg, var(--color-accent-mint) 0%, var(--color-teal) 100%);
+  
+  /* Dark Legacy fallbacks */
+  --background: var(--color-neutral-light);
+  --foreground: var(--color-neutral-dark);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -80,10 +103,44 @@ body {
   color: var(--foreground);
   font-family: 'Inter', 'Noto Sans', sans-serif;
   
-  /* Hardware acceleration for smooth scrolling */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  will-change: scroll-position;
+  /* Hardware acceleration for smooth scrolling - removed transform to fix fixed positioning */
+  /* transform: translateZ(0); */
+  /* -webkit-transform: translateZ(0); */
+  /* will-change: scroll-position; */
+}
+
+/* Dark Mode Background */
+.dark body {
+  background: 
+    /* Enhanced grain texture for dark mode */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E"),
+    
+    /* Elegant dark gradient layers */
+    radial-gradient(ellipse 900px 700px at 95% 15%, rgba(196, 181, 253, 0.25) 0%, rgba(196, 181, 253, 0.12) 40%, transparent 75%),
+    radial-gradient(ellipse 800px 600px at 85% 75%, rgba(246, 181, 187, 0.15) 0%, rgba(246, 181, 187, 0.08) 45%, transparent 75%),
+    radial-gradient(ellipse 750px 550px at 5% 25%, rgba(167, 139, 250, 0.3) 0%, rgba(167, 139, 250, 0.15) 35%, transparent 70%),
+    radial-gradient(ellipse 850px 650px at 15% 85%, rgba(246, 181, 187, 0.12) 0%, rgba(246, 181, 187, 0.06) 40%, transparent 75%),
+    
+    /* Sophisticated dark blending gradient */
+    linear-gradient(135deg, 
+      rgba(45, 27, 105, 0.4) 0%, 
+      rgba(88, 28, 135, 0.25) 20%,
+      rgba(124, 58, 237, 0.15) 40%,
+      rgba(246, 181, 187, 0.1) 60%, 
+      rgba(196, 181, 253, 0.08) 80%,
+      rgba(15, 15, 26, 0.6) 100%
+    ),
+    
+    /* Rich dark base */
+    linear-gradient(to bottom right, #0F0F1A 0%, #1E1B31 50%, #0F0F1A 100%);
+  
+  background-size: 
+    80px 80px, /* refined grain */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, /* gradients */
+    100% 100%, 100% 100%; /* base gradients */
+  
+  background-position: 0 0, center, center, center, center, center, center;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 /* Remove any overriding backgrounds */
@@ -99,12 +156,24 @@ body {
 
 /* Optimized Glass Elements */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(25px) saturate(200%) brightness(110%) contrast(120%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%) brightness(110%) contrast(120%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.4);
   transform: translateZ(0);
   will-change: transform;
+  isolation: isolate;
+  position: relative;
+  z-index: 10000;
+}
+
+.dark .glass-nav {
+  background: rgba(196, 181, 253, 0.08);
+  backdrop-filter: blur(25px) saturate(180%) brightness(130%) contrast(120%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(130%) contrast(120%);
+  border: 1px solid rgba(246, 181, 187, 0.2);
+  box-shadow: 0 8px 32px rgba(15, 15, 26, 0.4), inset 0 1px 0 rgba(246, 181, 187, 0.15);
 }
 
 .glass-card {
@@ -120,6 +189,20 @@ body {
 .glass-card:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px) translateZ(0);
+}
+
+.dark .glass-card {
+  background: rgba(246, 181, 187, 0.06);
+  backdrop-filter: blur(10px) saturate(160%) brightness(115%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%) brightness(115%);
+  border: 1px solid rgba(246, 181, 187, 0.15);
+  box-shadow: 0 4px 16px rgba(15, 15, 26, 0.2);
+}
+
+.dark .glass-card:hover {
+  background: rgba(246, 181, 187, 0.12);
+  border: 1px solid rgba(246, 181, 187, 0.25);
+  box-shadow: 0 8px 24px rgba(15, 15, 26, 0.3);
 }
 
 /* MathCo Typography Scale */
@@ -218,6 +301,13 @@ body {
       100% 100%, 100% 100%;
   }
   
+  .dark body {
+    background-size: 
+      40px 40px, /* refined grain on mobile */
+      100% 100%, 100% 100%, 100% 100%, 100% 100%,
+      100% 100%, 100% 100%;
+  }
+  
   .glass-card {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -226,5 +316,15 @@ body {
   .glass-nav {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
+  }
+  
+  .dark .glass-card {
+    backdrop-filter: blur(6px) saturate(140%) brightness(110%);
+    -webkit-backdrop-filter: blur(6px) saturate(140%) brightness(110%);
+  }
+  
+  .dark .glass-nav {
+    backdrop-filter: blur(12px) saturate(160%) brightness(125%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%) brightness(125%);
   }
 }

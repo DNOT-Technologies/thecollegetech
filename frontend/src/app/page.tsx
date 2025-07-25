@@ -1,19 +1,67 @@
+"use client";
+
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 
 export default function Home() {
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show nav when at top of page
+      if (currentScrollY === 0) {
+        setIsNavVisible(true);
+      }
+      // Hide nav when scrolling down, show when scrolling up
+      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsNavVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsNavVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
-    <div
-      className="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-      style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
-    >
-      {/* Fixed Navigation - Outside layout container */}
-      <div className="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-3 sm:pt-6">
-        <header className="glass-nav rounded-2xl px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between whitespace-nowrap">
-          <div className="flex items-center gap-4">  
-            <h2 className="text-[var(--color-primary-violet)] text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</h2>
+    <>
+      {/* Fixed Navigation - Island style */}
+      <div 
+        className="glass-nav rounded-2xl transition-transform duration-300 ease-in-out"
+        style={{ 
+          position: 'fixed', 
+          top: '16px', 
+          left: '16px', 
+          right: '16px', 
+          zIndex: 10000,
+          padding: '10px 20px',
+          transform: isNavVisible ? 'translateY(0)' : 'translateY(-120%)'
+        }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div className="flex items-center gap-2">  
+            <h2 className="text-[var(--color-primary-violet)] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</h2>
           </div>
-            <div className="flex flex-1 justify-end gap-4 sm:gap-8">
+            <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
                 <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="#home">
                   Home
@@ -32,16 +80,20 @@ export default function Home() {
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
-              <a href="mailto:nikhil@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[70px] sm:min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 sm:h-10 px-3 sm:px-4 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
+              <a href="mailto:nikhil@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Get Started</span>
               </a>
             </div>
-          </header>
+          </div>
         </div>
         
         {/* Main content with layout container */}
+        <div
+          className="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
+          style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
+        >
         <div className="layout-container flex h-full grow flex-col">
-          <div className="flex flex-1 justify-center py-5 pt-12 sm:pt-16">
+          <div className="flex flex-1 justify-center py-5 pt-16 sm:pt-18">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1 mx-auto">
             <div className="@container">
               <div className="@[480px]:p-4">
@@ -49,10 +101,10 @@ export default function Home() {
                   
                   <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl">
                     <h1 className="text-[var(--color-primary-violet)] text-3xl sm:text-5xl lg:text-7xl font-medium leading-[1.1] tracking-tight">
-                      Power your institution with Management systems, AI, and more.
+                      Power your institution with seamless Management Systems, AI, and more.
                     </h1>
                     <p className="text-[var(--color-primary-violet)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                    At TheCollegeTech (TCT), we develop crucial, education‑centric technologies bridging gaps in India's education system, delivering
+                    At TheCollegeTech (TCT), we develop crucial, education‑centric technologies bridging gaps in India&apos;s education system, delivering
                     intuitive, scalable solutions for institutions, educators, and employers.
                     </p>
                     <div className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
@@ -69,7 +121,7 @@ export default function Home() {
                       LATEST UPDATES
                     </div>
                     <div className="text-[var(--color-primary-violet)] text-base font-medium">
-                      Top 100 Educational Technology Innovations
+                      Top 50 Educational Technology Innovations
                     </div>
                     <div className="w-12 h-px bg-[var(--color-primary-violet)]/30 mt-4"></div>
                   </div>
@@ -168,112 +220,112 @@ export default function Home() {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/bits-min.png" alt="BITS Pilani" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BITS Pilani</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BITS Pilani</div>
                 </div>
                 {/* Client 2 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/iima-min.webp" alt="IIM Ahmedabad" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Ahmedabad</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Ahmedabad</div>
                 </div>
                 {/* Client 3 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/iimcal-min.webp" alt="IIM Calcutta" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Calcutta</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Calcutta</div>
                 </div>
                 {/* Client 4 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/vnit-logo.webp" alt="VNIT, Nagpur" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">VNIT, Nagpur</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">VNIT, Nagpur</div>
                 </div>
                 {/* Client 5 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/srm-logo.webp" alt="SRM University" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SRM University</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SRM University</div>
                 </div>
                 {/* Client 6 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/nmims-min.png" alt="NMIMS" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">NMIMS</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">NMIMS</div>
                 </div>
                 {/* Client 7 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/spjain-min.webp" alt="SP Jain" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SP Jain</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SP Jain</div>
                 </div>
                 {/* Client 8 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/bml-munjal-min.png" alt="BML" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BML</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BML</div>
                 </div>
                 {/* Client 9 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/ashoka-min.png" alt="Ashoka University" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Ashoka University</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Ashoka University</div>
                 </div>
                 {/* Client 10 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/Medicaps-UniversityLogo.webp" alt="Medicaps University" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Medicaps University</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Medicaps University</div>
                 </div>
                 {/* Client 11 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/raisoni-min.png" alt="Raisoni Group" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Raisoni Group</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Raisoni Group</div>
                 </div>
                 {/* Client 12 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/iitropar-min.jpg" alt="IIT Ropar" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Ropar</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Ropar</div>
                 </div>
                 {/* Client 13 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/upes-logo.webp" alt="UPES" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">UPES</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">UPES</div>
                 </div>
                 {/* Client 14 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/IIT_Kanpur_Logo.svg" alt="IIT Kanpur" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Kanpur</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Kanpur</div>
                 </div>
                 {/* Client 15 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/manipal-logo.webp" alt="Manipal, Jaipur" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Manipal, Jaipur</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Manipal, Jaipur</div>
                 </div>
                 {/* Client 16 */}
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
                     <Image src="https://joinsuperset.com/img/iit_patna_logo.png" alt="IIT Patna" width={80} height={80} className="object-contain" loading="lazy" />
                   </div>
-                  <div className="text-[#101518] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Patna</div>
+                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Patna</div>
                 </div>
               </div>
             </div>
@@ -339,7 +391,7 @@ export default function Home() {
                   <div className="p-4 sm:p-6">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Placeeasy</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      Connect students with top companies and internships through our intelligent placement platform with AI-powered matching.
+                      Connect students with companies and internships through our placement platform with ease.
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
@@ -429,7 +481,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="bg-[var(--color-primary-violet)] text-white">
+        <footer className="bg-gradient-to-br from-[var(--color-primary-violet)] via-[var(--color-indigo-start)] to-[var(--color-indigo-end)] text-white">
           <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="lg:col-span-2">
@@ -484,8 +536,9 @@ export default function Home() {
             </div>
           </div>
         </footer>
-      </div>
-    </div>
+        </div>
+        </div>
+    </>
   );
 }
 
