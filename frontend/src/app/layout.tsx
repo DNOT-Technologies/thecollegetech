@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
 
@@ -13,9 +13,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "TheCollegeTech",
-  description: "TheCollegeTech is a tech firm for educational institutions to find the best tech for their needs.",
+  title: "TheCollegeTech | Empowering Colleges with Innovative Tech Solutions",
+  description: "TheCollegeTech provides cutting-edge technology solutions, including Placeeasy for placements, Vidya LMS for learning management, and comprehensive IT services for educational institutions.",
 };
 
 export default function RootLayout({
@@ -26,7 +33,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
+        style={{ fontFamily: 'var(--font-inter), Inter, "Noto Sans", sans-serif' }}
       >
         <Analytics />
         {children}

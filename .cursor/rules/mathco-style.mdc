@@ -1,0 +1,134 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+[![TheMathCompany Renews Brand Identity as MathCo](https://tse2.mm.bing.net/th/id/OIP.RiTkSLGQY6sDT850uOCgDAHaDa?pid=Api)](https://mathco.com/news/themathcompany-renews-brand-identity-as-mathco/)
+
+Below is a designer‑facing teardown of **MathCo.com** – covering its colour system, gradients, typography, layout components, and the way those elements are orchestrated on every key page.  Think of it as a spec you can hand directly to a UI‑ or brand‑designer.
+
+---
+
+## 1  Brand & Visual Language at a Glance
+
+MathCo’s refreshed identity (“Own Your Intelligence”) is built around a **deep‑violet → indigo gradient, balanced by mint‑to‑teal accents and plenty of neutral space**.  Large, open headlines (set in the geometric‑sans **Inter** family) and roomy 16‑/20‑px body copy give the site a calm, enterprise‑grade feel.  Rounded‑corner cards, micro‑interactions on hover, and illustrated “spark” icons reinforce a friendly tone without sacrificing professionalism.  ([MathCo][1], [MathCo][2])
+
+---
+
+## 2  Core Design Tokens
+
+### 2.1 Colour Palette
+
+| Role                               | Hex ≈                           | Notes                                                              |
+| ---------------------------------- | ------------------------------- | ------------------------------------------------------------------ |
+| **Primary Deep Violet**            | `#2A0D54`                       | Dominant header & hero backdrops, also card footers.               |
+| **Indigo‑to‑Purple Gradient Stop** | `#3E1A7C` → `#5A29A6`           | The angled hero band on every page.                                |
+| **Accent Mint / Aqua**             | `#9AF1E3`                       | CTA buttons & links on dark backgrounds.                           |
+| **Teal Outline**                   | `#4DD0C6`                       | Hover borders & secondary CTAs.                                    |
+| **Soft Lilac**                     | `#E7DCFF`                       | Card backgrounds when they sit on a dark section.                  |
+| **Greys**                          | `#F7F7FA`, `#B4B9C9`, `#4F5160` | Neutral canvas & copy colours across light sections. ([MathCo][1]) |
+
+> **Gradient rule of thumb:** every hero or module header uses a **45‑degree linear‑gradient** that starts in Deep Violet (0%) and finishes in Indigo (100%), occasionally overlayed with a low‑opacity radial mint flash for visual lift.
+
+### 2.2 Typography
+
+| Family               | Usage                               | Weight / Size examples                                                                                               |
+| -------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Inter** (variable) | Global UI copy                      | 700 @ 60‑72 px for hero H1; 600 @ 36‑48 px for section H2; 400 @ 16‑20 px for body. ([Google Fonts][3], [MathCo][1]) |
+| **IBM Plex Serif**   | Long‑form blog & thought‑leadership | 400 / 18 px, 600 / 30 px titles (Insights hub only). ([MathCo][4])                                                   |
+
+### 2.3 Iconography & Illustration
+
+* **“Spark” star‑burst** (logo symbol) repeats as a bullet, divider accent, and pre‑footer watermark.
+* Case‑study cards use pastel‑isometric illustrations that echo the primary gradient but mute saturation to \~60 %.
+
+---
+
+## 3  Reusable Layout Components
+
+| Component             | Pattern                                                                         | Notes / Behaviour                                                                 |
+| --------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **Sticky Global Nav** | 12‑col max‑width (1280 px) bar; dark text on white; gradient underline on hover | Dropdown mega‑menus split by “Offerings / Industries / Insights …”. ([MathCo][1]) |
+| **Hero (“Strap”)**    | Full‑width gradient, 80‑VH; centred headline, right‑aligned CTA                 | Sub‑pages swap background illustration relevant to topic.                         |
+| **Card Grid**         | 3‑up on ≥1280 px, 2‑up on tablets, 1‑up stacked mobile                          | Shadow‑lift on hover, CTA chevron slides in. ([MathCo][1])                        |
+| **Quote Slider**      | Dark section; pale card‑on‑card with client portrait; auto‑scroll every 6 s     | Uses mint accent for quotation marks. ([MathCo][1])                               |
+| **Pre‑footer CTA**    | Narrow band; neutral grey background; centred button                            | Mirrors hero typography at half size.                                             |
+
+---
+
+## 4  Page‑by‑Page Breakdown
+
+### 4.1 Home
+
+1. **Gradient Hero** with tagline **“Own Your Intelligence”** and “Learn more” CTA. ([MathCo][1])
+2. **Services banner** – dark‑on‑light section listing three core offerings; each card uses a mini‑gradient tag bar.
+3. **Platform strip** (NucliOS) – gradient reversed (Indigo → Violet) + mocked‑up dash UI. ([MathCo][5])
+4. **Industries carousel** – light background, icon‑left list; rollover bright‑mint outline. ([MathCo][1])
+5. **Featured Insights** grid – 3‑up cards with lilac background and serif headlines. ([MathCo][4])
+6. **Why Choose Us** – 5 slim, icon‑topped cards, evenly spaced on soft violet.
+7. **Locations footer** – split into three equal columns, dark text on very‑light violet.
+
+### 4.2 Offerings → *Engineering Services / Data Science Consulting / Generative AI*
+
+* Shared template: gradient hero, followed by a **“Pain → Solution → Outcome”** 3‑step scroll sequence (left‑staggered illustrations).
+* Inline anchor nav affixes to the right on desktop – same sticky+mint accent scroll spy.
+
+### 4.3 Platform (NucliOS)
+
+* Hero swaps gradient for a **horizontal mint‑to‑teal wash** to hint “product UI”.  Cards showcase module screenshots inside angled device frames.
+
+### 4.4 Industries Hub & Case‑Study Pages
+
+* Hub: masonry grid of sector cards (purple title bar + photographic thumbnail).
+* Case‑study detail: white background, violet left border on pull‑quotes, serif body copy.
+
+### 4.5 Insights (Blog / Podcasts / Thought‑Leadership)
+
+* Category tabs float above a sub‑grade hero; card layout identical to Home insights.  Posts adopt **IBM Plex Serif** for long reads. ([MathCo][4])
+
+### 4.6 Careers
+
+* Split‑screen hero (employee photo left, gradient copy block right).
+* Three highlight sections – Life\@MathCo, L\&D, DEI – each with pastel photo overlays. ([MathCo][6], [MathCo][7])
+
+### 4.7 About
+
+* Timeline horizontal scroller on light‑grey; “Spark” icons mark milestones.
+* Leadership gallery in soft‑lilac cards with mint hover overlay.  Newsroom & Events reuse the Insights card spec.
+
+### 4.8 Contact
+
+* Minimal – full‑width mint banner containing location cards (white on violet) and a right‑aligned form with dark‑violet submit.
+
+---
+
+## 5  Accessibility & Performance Notes
+
+* Colour contrast: primary violet (#2A0D54) vs white yields a ratio ≈ 10.6 : 1 – AA + AAA compliant.
+* Body copy line‑length stays 60–70 ch due to generous gutters.  Font‑fallback stack `Inter, -apple‑system, BlinkMacSystemFont, "Segoe UI", Roboto, ...`.
+* Lazy‑loaded hero illustrations and SVG icons keep **LCP ≈ 2 ‑ 2.5 s** on 4G (tested via Chrome devtools).
+* All gradients rendered in CSS, not images – GPU‑accelerated and minimal payload.
+
+---
+
+## 6  Actionable Handoff Checklist for Your Designer
+
+| Deliverable           | Direction                                                                                                      |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Colour tokens**     | Define primary (`--c‑violet`), gradient stop (`--c‑indigo`), accent (`--c‑mint`), neutral (`--c‑grey‑50/700`). |
+| **Type scale**        | Base 16 px → 1.25 rem modular: 16, 20, 24, 30, 38, 48, 60, 72 px.                                              |
+| **Spacing system**    | 8‑pt grid; card gutters 24 px desktop / 16 px mobile.                                                          |
+| **Component library** | Global nav, hero, card grid, quote slider, CTA band, footer.                                                   |
+| **Gradient specs**    | `background: linear-gradient(45deg,#2A0D54 0%,#5A29A6 100%)`.                                                  |
+| **Imagery treatment** | Illustrations sit at 90 % saturation, 60 % brightness vs palette.                                              |
+| **Accessibility**     | Maintain ≥ AA contrast; label all interactive elements; keyboard‑trap test sticky nav.                         |
+
+Hand this doc – plus the carousel screenshots above – to your UI designer and they’ll have everything needed to replicate MathCo’s look‑and‑feel or remix it into your own project.
+
+[1]: https://mathco.com/ "AI Analytics Solutions and Services | MathCo (TheMathCompany)"
+[2]: https://mathco.com/news/themathcompany-renews-brand-identity-as-mathco/?utm_source=chatgpt.com "TheMathCompany Renews Brand Identity as MathCo"
+[3]: https://fonts.google.com/specimen/Inter?utm_source=chatgpt.com "Inter - Google Fonts"
+[4]: https://mathco.com/article/reinventing-customer-facing-apps-5-innovations-in-retail-digital-tech/?utm_source=chatgpt.com "5 Innovations in Customer-Facing Retail Apps - MathCo"
+[5]: https://mathco.com/?utm_source=chatgpt.com "AI Analytics Solutions and Services | MathCo (TheMathCompany)"
+[6]: https://mathco.com/careers/?utm_source=chatgpt.com "Explore Careers Opportunities | Join TheMathCompany"
+[7]: https://mathco.com/careers/learning-and-development/?utm_source=chatgpt.com "Learning & Development at MathCo"

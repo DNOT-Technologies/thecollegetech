@@ -1,8 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* MathCo Color System */
+  --color-primary-violet: #2A0D54;
+  --color-indigo-start: #3E1A7C;
+  --color-indigo-end: #5A29A6;
+  --color-accent-mint: #F6B5BB;
+  --color-teal: #F6B5BB;
+  --color-soft-lilac: #E7DCFF;
+  --color-neutral-light: #F7F7FA;
+  --color-neutral-medium: #B4B9C9;
+  --color-neutral-dark: #4F5160;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(45deg, var(--color-primary-violet) 0%, var(--color-indigo-end) 100%);
+  --gradient-primary-reverse: linear-gradient(45deg, var(--color-indigo-end) 0%, var(--color-primary-violet) 100%);
+  --gradient-mint-teal: linear-gradient(90deg, var(--color-accent-mint) 0%, var(--color-teal) 100%);
+  
+  /* Legacy fallbacks */
+  --background: var(--color-neutral-light);
+  --foreground: var(--color-neutral-dark);
 }
 
 @theme inline {
@@ -14,13 +31,200 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--color-primary-violet);
+    --foreground: var(--color-neutral-light);
   }
 }
 
+/* Optimized Smooth Gradient Background */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 body {
-  background: var(--background);
+  background: 
+    /* Simplified grain texture */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E"),
+    
+    /* Optimized gradient layers for performance */
+    radial-gradient(ellipse 800px 600px at 95% 20%, rgba(255, 107, 107, 0.5) 0%, rgba(255, 107, 107, 0.2) 40%, transparent 70%),
+    radial-gradient(ellipse 700px 500px at 90% 70%, rgba(255, 183, 77, 0.5) 0%, rgba(255, 183, 77, 0.2) 40%, transparent 70%),
+    radial-gradient(ellipse 800px 600px at 5% 30%, rgba(139, 69, 195, 0.6) 0%, rgba(139, 69, 195, 0.3) 30%, transparent 65%),
+    radial-gradient(ellipse 700px 500px at 10% 80%, rgba(168, 85, 247, 0.5) 0%, rgba(168, 85, 247, 0.25) 35%, transparent 70%),
+    
+    /* Single blending gradient for smooth transitions */
+    linear-gradient(135deg, 
+      rgba(139, 69, 195, 0.15) 0%, 
+      rgba(168, 85, 247, 0.12) 20%,
+      rgba(219, 112, 193, 0.1) 40%,
+      rgba(244, 114, 182, 0.12) 60%, 
+      rgba(255, 183, 77, 0.15) 80%,
+      rgba(254, 215, 170, 0.1) 100%
+    ),
+    
+    /* Clean base */
+    linear-gradient(to bottom right, #f8fafc 0%, #f1f5f9 100%);
+  
+  background-size: 
+    100px 100px, /* smaller grain for better performance */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, /* gradients */
+    100% 100%, 100% 100%; /* base gradients */
+  
+  background-position: 0 0, center, center, center, center, center, center;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  /* Removed background-attachment: fixed for smooth scrolling */
+  
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', 'Noto Sans', sans-serif;
+  
+  /* Hardware acceleration for smooth scrolling */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+/* Remove any overriding backgrounds */
+.group\/design-root {
+  background: transparent !important;
+}
+
+/* MathCo Hero Background - Now inherits from body */
+.mathco-hero-bg {
+  background: transparent !important;
+  backdrop-filter: none;
+}
+
+/* Optimized Glass Elements */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: translateZ(0);
+  will-change: transform;
+  transition: all 0.2s ease-out;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px) translateZ(0);
+}
+
+/* MathCo Typography Scale */
+.mathco-h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: clamp(48px, 8vw, 72px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.mathco-h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.mathco-h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 3vw, 30px);
+  line-height: 1.3;
+}
+
+.mathco-body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+}
+
+.mathco-body-sm {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Gradient Utilities */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-primary-reverse {
+  background: var(--gradient-primary-reverse);
+}
+
+.bg-gradient-mint-teal {
+  background: var(--gradient-mint-teal);
+}
+
+/* Optimized Interactive Elements */
+.mathco-button-primary {
+  background: var(--color-accent-mint);
+  color: var(--color-primary-violet);
+  border: 2px solid transparent;
+  transition: all 0.2s ease-out;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.mathco-button-primary:hover {
+  background: var(--color-teal);
+  transform: translateY(-1px) translateZ(0);
+  box-shadow: 0 4px 15px rgba(42, 13, 84, 0.15);
+}
+
+.mathco-button-secondary {
+  background: transparent;
+  color: var(--color-accent-mint);
+  border: 2px solid var(--color-teal);
+  transition: all 0.2s ease-out;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.mathco-button-secondary:hover {
+  background: var(--color-teal);
+  color: var(--color-primary-violet);
+  transform: translateY(-1px) translateZ(0);
+}
+
+/* Smooth scrolling for the entire page */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Optimized for mobile performance */
+@media (max-width: 768px) {
+  body {
+    background-size: 
+      50px 50px, /* even smaller grain on mobile */
+      100% 100%, 100% 100%, 100% 100%, 100% 100%,
+      100% 100%, 100% 100%;
+  }
+  
+  .glass-card {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .glass-nav {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 }
