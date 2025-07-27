@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Careers() {
   const [isNavVisible, setIsNavVisible] = useState(true);
@@ -46,22 +46,22 @@ export default function Careers() {
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
-            <a href="/" className="text-[var(--color-primary-violet)] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</a>
+            <Link href="/" className="text-[var(--color-primary-violet)] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</Link>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/">
+                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/">
                   Home
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#services">
+                </Link>
+                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#services">
                   Services
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#products">
+                </Link>
+                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#products">
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
+                </Link>
                 <a className="text-[var(--color-primary-violet)] text-sm font-medium leading-normal relative group transition-colors duration-300" href="/careers">
                   Careers
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-primary"></span>
@@ -95,7 +95,7 @@ export default function Careers() {
                       Join Our Mission to Transform Education
                     </h1>
                     <p className="text-[var(--color-primary-violet)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                      Be part of a team that's revolutionizing educational technology. We're looking for passionate individuals who want to make a real impact in India's education system.
+                      Be part of a team that&apos;s revolutionizing educational technology. We&apos;re looking for passionate individuals who want to make a real impact in India&apos;s education system.
                     </p>
                     <a href="#open-positions" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
                       <span className="text-sm sm:text-base font-medium">View open positions</span>
@@ -115,7 +115,7 @@ export default function Careers() {
                   Why Join TheCollegeTech?
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  We're building the future of educational technology. Join us in creating innovative solutions that empower institutions, educators, and students across India.
+                  We&apos;re building the future of educational technology. Join us in creating innovative solutions that empower institutions, educators, and students across India.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -129,7 +129,7 @@ export default function Careers() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Meaningful Impact</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Work on products that directly impact millions of students and educators across India's education system.
+                      Work on products that directly impact millions of students and educators across India&apos;s education system.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -151,7 +151,7 @@ export default function Careers() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Innovation Culture</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Be part of a culture that encourages creativity, experimentation, and pushing the boundaries of what's possible.
+                      Be part of a culture that encourages creativity, experimentation, and pushing the boundaries of what&apos;s possible.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -300,10 +300,10 @@ export default function Careers() {
               <div className="glass-card rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto text-center">
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                    Don't See Your Role?
+                    Don&apos;t See Your Role?
                   </h1>
                   <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                    We're always looking for talented individuals who are passionate about transforming education. Send us your resume and let's discuss how you can contribute to our mission.
+                    We&apos;re always looking for talented individuals who are passionate about transforming education. Send us your resume and let&apos;s discuss how you can contribute to our mission.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
@@ -358,7 +358,7 @@ export default function Careers() {
                 <h4 className="text-[var(--color-accent-mint)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">About Us</a></li>
-                  <li><a href="/careers" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Careers</a></li>
+                  <li><Link href="/careers" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Careers</Link></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Contact</a></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Privacy Policy</a></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Terms of Service</a></li>

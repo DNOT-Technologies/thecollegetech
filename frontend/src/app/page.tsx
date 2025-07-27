@@ -39,9 +39,7 @@ export default function Home() {
     }
   }, [isDarkMode]);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+
   return (
     <>
       {/* Fixed Navigation - Island style */}
