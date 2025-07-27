@@ -66,12 +66,12 @@ export default function Careers() {
                   Careers
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-primary"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:nikhil@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
+                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
-              <a href="mailto:nikhil@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
+              <a href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Get Started</span>
               </a>
             </div>
@@ -263,7 +263,7 @@ export default function Careers() {
                       <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Agile</span>
                     </div>
                     <div className="mt-auto">
-                      <a href="mailto:nikhil@thecollegetech.com?subject=Application%20for%20Product%20Manager" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
+                      <a href="mailto:contact@thecollegetech.com?subject=Application%20for%20Product%20Manager" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
                         Apply Now
                       </a>
                     </div>
@@ -286,7 +286,7 @@ export default function Careers() {
                       <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Relationship Building</span>
                     </div>
                     <div className="mt-auto">
-                      <a href="mailto:nikhil@thecollegetech.com?subject=Application%20for%20Sales%20Representative" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
+                      <a href="mailto:contact@thecollegetech.com?subject=Application%20for%20Sales%20Representative" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
                         Apply Now
                       </a>
                     </div>
@@ -307,7 +307,7 @@ export default function Careers() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
-                  <a href="mailto:nikhil@thecollegetech.com?subject=General%20Application%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
+                  <a href="mailto:contact@thecollegetech.com?subject=General%20Application%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Send Resume</span>
                   </a>
                   <a href="https://calendly.com/nikhiltirunagiri/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-[var(--color-primary-violet)] text-[var(--color-primary-violet)] hover:bg-[var(--color-primary-violet)] hover:text-white transition-all duration-300 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">

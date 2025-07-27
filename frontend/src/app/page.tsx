@@ -70,12 +70,12 @@ export default function Home() {
                   Careers
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:nikhil@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
+                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
               </div>
-              <a href="mailto:nikhil@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
+              <a href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Get Started</span>
               </a>
             </div>
@@ -102,15 +102,16 @@ export default function Home() {
                     At TheCollegeTech (TCT), we develop crucial, education‑centric technologies bridging gaps in India&apos;s education system, delivering
                     intuitive, scalable solutions for institutions, educators, and employers.
                     </p>
-                    <div className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
+                    <a href="#services" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
                       <span className="text-sm sm:text-base font-medium">Learn more</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                         <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
                       </svg>
-                    </div>
+                    </a>
                   </div>
                   
-                  {/* Latest Updates Card - Hidden on mobile */}
+                  {/* Latest Updates Card - Commented Out */}
+                  {/* 
                   <div className="hidden lg:block absolute bottom-8 right-8 glass-card rounded-2xl p-6 max-w-xs z-10">
                     <div className="text-[var(--color-primary-violet)] text-xs font-semibold uppercase tracking-wider mb-2">
                       LATEST UPDATES
@@ -120,6 +121,7 @@ export default function Home() {
                     </div>
                     <div className="w-12 h-px bg-[var(--color-primary-violet)]/30 mt-4"></div>
                   </div>
+                  */}
                 </div>
               </div>
             </div>
@@ -200,139 +202,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8 sm:gap-12 px-4 py-12 sm:py-16 @container">
-              <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
-                <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                  Trusted by Leading Institutions
-                </h1>
-                <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  We are proud to serve a diverse range of educational institutions, from premier IITs and IIMs to innovative universities across India.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 py-4">
-                {/* Client 1 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/bits-min.png" alt="BITS Pilani" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BITS Pilani</div>
-                </div>
-                {/* Client 2 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/iima-min.webp" alt="IIM Ahmedabad" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Ahmedabad</div>
-                </div>
-                {/* Client 3 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/iimcal-min.webp" alt="IIM Calcutta" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIM Calcutta</div>
-                </div>
-                {/* Client 4 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/vnit-logo.webp" alt="VNIT, Nagpur" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">VNIT, Nagpur</div>
-                </div>
-                {/* Client 5 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/srm-logo.webp" alt="SRM University" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SRM University</div>
-                </div>
-                {/* Client 6 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/nmims-min.png" alt="NMIMS" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">NMIMS</div>
-                </div>
-                {/* Client 7 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/spjain-min.webp" alt="SP Jain" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">SP Jain</div>
-                </div>
-                {/* Client 8 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/bml-munjal-min.png" alt="BML" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">BML</div>
-                </div>
-                {/* Client 9 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/ashoka-min.png" alt="Ashoka University" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Ashoka University</div>
-                </div>
-                {/* Client 10 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/Medicaps-UniversityLogo.webp" alt="Medicaps University" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Medicaps University</div>
-                </div>
-                {/* Client 11 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/raisoni-min.png" alt="Raisoni Group" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Raisoni Group</div>
-                </div>
-                {/* Client 12 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/iitropar-min.jpg" alt="IIT Ropar" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Ropar</div>
-                </div>
-                {/* Client 13 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/upes-logo.webp" alt="UPES" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">UPES</div>
-                </div>
-                {/* Client 14 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/IIT_Kanpur_Logo.svg" alt="IIT Kanpur" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Kanpur</div>
-                </div>
-                {/* Client 15 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/manipal-logo.webp" alt="Manipal, Jaipur" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">Manipal, Jaipur</div>
-                </div>
-                {/* Client 16 */}
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center mb-2">
-                    <Image src="https://joinsuperset.com/img/iit_patna_logo.png" alt="IIT Patna" width={80} height={80} className="object-contain" loading="lazy" />
-                  </div>
-                  <div className="text-[var(--color-neutral-dark)] text-xs sm:text-base font-normal leading-normal max-w-[720px] text-center">IIT Patna</div>
-                </div>
-              </div>
-            </div>
+            {/* Trusted by Leading Institutions Section - Commented Out */}
             
             {/* Testimonials Section */}
             <div className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                  What Our Partners Say
+                  We are redefining EdTech.
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Hear from our trusted institutional partners about their transformative experiences with our technology solutions.
+                  Hear from trusted people about their experience using Placeeasy and Viyda (Our best placement and learning management system).
                 </p>
               </div>
               <div className="max-w-4xl mx-auto">
@@ -388,14 +267,14 @@ export default function Home() {
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
                       Connect students with companies and internships through our placement platform with ease.
                     </p>
-                    <div className="flex items-center justify-between">
+                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Placeeasy&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Placeeasy%20and%20how%20it%20can%20help%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 
@@ -415,14 +294,14 @@ export default function Home() {
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
                       Enhance learning experiences with our comprehensive learning management system featuring interactive content and analytics.
                     </p>
-                    <div className="flex items-center justify-between">
+                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Vidya%20LMS&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Vidya%20LMS%20and%20how%20it%20can%20enhance%20our%20learning%20management." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
                 
@@ -442,14 +321,14 @@ export default function Home() {
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
                       Comprehensive IT services including infrastructure management, cybersecurity, and 24/7 technical support for educational institutions.
                     </p>
-                    <div className="flex items-center justify-between">
+                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20IT%20Services&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20IT%20Services%20and%20how%20they%20can%20support%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="currentColor">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -465,7 +344,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
-                  <a href="mailto:nikhil@thecollegetech.com?subject=Ready%20to%20Transform%20Our%20Institution%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
+                  <a href="mailto:contact@thecollegetech.com?subject=Ready%20to%20Transform%20Our%20Institution%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Get Started Today</span>
                   </a>
                   <a href="https://calendly.com/nikhiltirunagiri/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-[var(--color-primary-violet)] text-[var(--color-primary-violet)] hover:bg-[var(--color-primary-violet)] hover:text-white transition-all duration-300 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
