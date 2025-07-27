@@ -6,6 +6,7 @@ import Link from "next/link";
 export default function Careers() {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +74,71 @@ export default function Careers() {
               </div>
               <a href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
                 <span className="truncate">Get Started</span>
+              </a>
+              {/* Mobile Menu Button */}
+              <button 
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
+                aria-label="Toggle mobile menu"
+              >
+                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        {/* Mobile Menu Overlay */}
+        <div className={`md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+          <div className={`absolute top-0 right-0 w-64 h-full bg-white/40 backdrop-blur-md shadow-2xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className="flex flex-col p-6 pt-20">
+              <Link 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
+                href="/"
+              >
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
+                href="/#services"
+              >
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <Link 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
+                href="/#products"
+              >
+                Products
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+              <a 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
+                href="/careers"
+              >
+                Careers
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
+                href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website"
+              >
+                Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+              </a>
+              <a 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="mathco-button-primary mt-6 text-center py-3 rounded-lg text-base font-medium" 
+                href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services"
+              >
+                Get Started
               </a>
             </div>
           </div>
