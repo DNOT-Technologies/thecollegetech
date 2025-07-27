@@ -369,7 +369,7 @@ export default function Careers() {
             <div className="border-t border-white/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <p className="text-white/60 mathco-body-sm text-xs sm:text-sm text-center md:text-left">&copy; 2025 TheCollegeTech. All rights reserved.</p>
               <div>
-                <p className="text-[var(--color-accent-mint)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It's time for a change and we can make it happen.</p>
+                <p className="text-[var(--color-accent-mint)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
               </div>
             </div>
           </div>
