@@ -75,6 +75,10 @@ export default function Home() {
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
+                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/careers">
+                  Careers
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
+                </a>
                 <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:nikhil@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
