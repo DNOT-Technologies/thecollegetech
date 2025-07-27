@@ -133,13 +133,7 @@ export default function Careers() {
                 Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="mathco-button-primary mt-6 text-center py-3 rounded-lg text-base font-medium" 
-                href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services"
-              >
-                Get Started
-              </a>
+
             </div>
           </div>
         </div>
