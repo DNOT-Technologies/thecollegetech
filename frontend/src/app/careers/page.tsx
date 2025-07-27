@@ -228,29 +228,6 @@ export default function Careers() {
                 <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Product Manager</h3>
-                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
-                    </div>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
-                      Drive product strategy and execution for our educational technology solutions, working closely with engineering and design teams.
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Product Strategy</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">User Research</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Agile</span>
-                    </div>
-                    <div className="mt-auto">
-                      <a href="mailto:nikhil@thecollegetech.com?subject=Application%20for%20Product%20Manager" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
-                        Apply Now
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Position 3 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
-                  <div className="flex flex-col h-full">
-                    <div className="flex items-start justify-between mb-4">
                       <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">UI/UX Designer</h3>
                       <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
                     </div>
@@ -264,6 +241,29 @@ export default function Careers() {
                     </div>
                     <div className="mt-auto">
                       <a href="https://forms.gle/xhfHrPaU28Ze5Z9r6" target="_blank" rel="noopener noreferrer" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
+                        Apply Now
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Position 3 */}
+                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start justify-between mb-4">
+                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Product Manager</h3>
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
+                    </div>
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
+                      Drive product strategy and execution for our educational technology solutions, working closely with engineering and design teams.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Product Strategy</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">User Research</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Agile</span>
+                    </div>
+                    <div className="mt-auto">
+                      <a href="mailto:nikhil@thecollegetech.com?subject=Application%20for%20Product%20Manager" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
                         Apply Now
                       </a>
                     </div>
