@@ -263,7 +263,7 @@ export default function Careers() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Full Stack Developer</h3>
-                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
                       Lead development of our educational platforms using modern technologies like React, Node.js, and cloud services.
@@ -289,7 +289,7 @@ export default function Careers() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">UI/UX Designer</h3>
-                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
                       Create beautiful, intuitive user experiences for our educational platforms that delight students and educators.
@@ -312,7 +312,7 @@ export default function Careers() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Product Manager</h3>
-                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
                       Drive product strategy and execution for our educational technology solutions, working closely with engineering and design teams.
@@ -335,7 +335,7 @@ export default function Careers() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Sales Representative</h3>
-                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">Full-time</span>
+                      <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
                       Build relationships with educational institutions and drive adoption of our innovative technology solutions.
