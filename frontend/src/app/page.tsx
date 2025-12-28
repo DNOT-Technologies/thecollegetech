@@ -165,14 +165,22 @@ export default function Home() {
             <div className="@container">
               <div id="home" className="mathco-hero-bg flex  flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 relative overflow-hidden " style={{ paddingTop: '129px', paddingBottom: '129px', marginTop: '0px', marginBottom: '0px', minHeight: '100vh' }}>
                 
-                <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl justify-center items-start mx-auto" style={{ marginTop: '8px', marginBottom: '8px', boxSizing: 'content-box' }}>
+                <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-3xl justify-center items-start mx-auto" style={{ marginTop: '8px', marginBottom: '8px', boxSizing: 'content-box', borderLeft: '0.1px solid rgba(255, 255, 255, 1)', borderRight: '0.1px solid rgba(255, 255, 255, 1)', minHeight: '60vh', paddingLeft: '2rem', paddingRight: '2rem' }}>
+                  {/* Top-left dot */}
+                  <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+                  {/* Bottom-left dot */}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+                  {/* Top-right dot */}
+                  <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+                  {/* Bottom-right dot */}
+                  <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-7xl font-medium leading-[1.1] tracking-tight flex flex-col justify-start items-start">
                     Power your institution with seamless Management Systems and AI.
                   </h1>
                   <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
                   At TheCollegeTech (TCT), we build education‑centric technologies built for Indian institutions to help them grow and succeed.
                   </p>
-                  <a href="#services" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
+                  <a href="https://calendly.com/nikhiltirunagiri/30min?month=2025-12" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
                     <span className="text-sm sm:text-base font-medium text-white">Get Free Trial</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
@@ -287,12 +295,19 @@ export default function Home() {
               We are redefining EdTech.
             </h1>
             <p className="text-white mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-              Hear from trusted people about their experience using Placeeasy and Viyda (Our best placement and learning management system).
+              Hear from trusted people about their experience using Placeeasy and Viyda (Our Placement and Learning Management System).
             </p>
           </div>
           <div className="max-w-4xl mx-auto px-4">
-            <div className="glass-card rounded-2xl p-6 sm:p-8 relative">
-              
+            <div className="p-6 sm:p-8 relative" style={{ backgroundColor: 'transparent', borderLeft: '0.5px solid rgba(255, 255, 255, 1)', borderRight: '0.5px solid rgba(255, 255, 255, 1)' }}>
+              {/* Top-left dot */}
+              <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+              {/* Bottom-left dot */}
+              <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+              {/* Top-right dot */}
+              <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+              {/* Bottom-right dot */}
+              <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
               <div className="pt-6 sm:pt-8">
                 <p className="text-white mathco-body text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
                   TheCollegeTech has the potential to revolutionize the on campus placement process and how students interact with their coursework. Their platforms are seamless and very user friendly.
@@ -416,7 +431,7 @@ export default function Home() {
               <div className="glass-card rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto text-center">
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                    Transform Your Institution with TheCollegeTech
+                    Transform Your Institution with Right Technology
                   </h1>
                   <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
                     Ready to revolutionize your educational technology? Contact us today to learn how our innovative solutions can benefit your institution and enhance student success.

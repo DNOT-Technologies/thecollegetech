@@ -248,33 +248,33 @@ export default function Careers() {
             </div>
 
             {/* Open Positions Section */}
-            <div id="open-positions" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
+            <div id="open-positions" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container" style={{ backgroundColor: '#274C77', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
-                <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
+                <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
                   Open Positions
                 </h1>
-                <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
+                <p className="text-white/80 mathco-body max-w-3xl mx-auto text-sm sm:text-base">
                   Explore our current openings and find the perfect role for your skills and passion.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
                 {/* Position 1 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
+                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Full Stack Developer</h3>
+                      <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Full Stack Developer</h3>
                       <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
+                    <p className="mathco-body-sm text-sm mb-4" style={{ color: 'var(--color-white)' }}>
                       Lead development of our educational platforms using modern technologies like React, Node.js, and cloud services.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">React</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Node.js</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">AWS</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Python</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">SQL</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Git</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>React</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Node.js</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>AWS</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Python</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>SQL</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Git</span>
                     </div>
                     <div className="mt-auto">
                       <a href="https://forms.gle/mf1s6r8uWtxRFVK86" target="_blank" rel="noopener noreferrer" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
@@ -285,19 +285,19 @@ export default function Careers() {
                 </div>
 
                 {/* Position 2 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
+                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">UI/UX Designer</h3>
+                      <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>UI/UX Designer</h3>
                       <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
+                    <p className="mathco-body-sm text-sm mb-4" style={{ color: 'var(--color-white)' }}>
                       Create beautiful, intuitive user experiences for our educational platforms that delight students and educators.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Figma</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">User Research</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Prototyping</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Figma</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>User Research</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Prototyping</span>
                     </div>
                     <div className="mt-auto">
                       <a href="https://forms.gle/xhfHrPaU28Ze5Z9r6" target="_blank" rel="noopener noreferrer" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
@@ -308,19 +308,19 @@ export default function Careers() {
                 </div>
 
                 {/* Position 3 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
+                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Product Manager</h3>
+                      <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Product Manager</h3>
                       <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
+                    <p className="mathco-body-sm text-sm mb-4" style={{ color: 'var(--color-white)' }}>
                       Drive product strategy and execution for our educational technology solutions, working closely with engineering and design teams.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Product Strategy</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">User Research</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Agile</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Product Strategy</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>User Research</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Agile</span>
                     </div>
                     <div className="mt-auto">
                       <a href="mailto:contact@thecollegetech.com?subject=Application%20for%20Product%20Manager" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
@@ -331,19 +331,19 @@ export default function Careers() {
                 </div>
 
                 {/* Position 4 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300">
+                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
-                      <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl pr-4">Sales Representative</h3>
+                      <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Sales Representative</h3>
                       <span className="bg-gradient-primary text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0">3 Months Contract</span>
                     </div>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm mb-4">
+                    <p className="mathco-body-sm text-sm mb-4" style={{ color: 'var(--color-white)' }}>
                       Build relationships with educational institutions and drive adoption of our innovative technology solutions.
                     </p>
                     <div className="flex flex-wrap gap-2 mb-6">
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">B2B Sales</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Education</span>
-                      <span className="bg-[var(--color-primary-violet)]/10 text-[var(--color-primary-violet)] px-2 py-1 rounded text-xs">Relationship Building</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>B2B Sales</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Education</span>
+                      <span className="bg-[var(--color-primary-violet)]/10 px-2 py-1 rounded text-xs" style={{ color: 'rgba(255, 255, 255, 1)' }}>Relationship Building</span>
                     </div>
                     <div className="mt-auto">
                       <a href="mailto:contact@thecollegetech.com?subject=Application%20for%20Sales%20Representative" className="mathco-button-primary w-full text-center py-3 rounded-lg text-sm font-medium block">
