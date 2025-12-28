@@ -151,13 +151,13 @@ export default function Careers() {
                 <div className="mathco-hero-bg flex min-h-[60vh] sm:min-h-[70vh] flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 @[480px]:rounded-xl relative overflow-hidden">
                   
                   <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl">
-                    <h1 className="text-[var(--color-primary-violet)] text-3xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight">
+                    <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight">
                       Join Our Mission to Transform Education
                     </h1>
-                    <p className="text-[var(--color-primary-violet)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
+                    <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
                       Be part of a team that&apos;s revolutionizing educational technology. We&apos;re looking for passionate individuals who want to make a real impact in India&apos;s education system.
                     </p>
-                    <a href="#open-positions" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
+                    <a href="#open-positions" className="flex items-center gap-2 text-[var(--color-primary-white)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
                       <span className="text-sm sm:text-base font-medium">View open positions</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="group-hover:translate-x-1 transition-transform duration-300">
                         <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
@@ -366,7 +366,7 @@ export default function Careers() {
                     We&apos;re always looking for talented individuals who are passionate about transforming education. Send us your resume and let&apos;s discuss how you can contribute to our mission.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center">
                   <a href="mailto:contact@thecollegetech.com?subject=General%20Application%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Send Resume</span>
                   </a>
@@ -378,11 +378,11 @@ export default function Careers() {
             </div>
           </div>
         </div>
-        <footer className="bg-gradient-to-br from-[var(--color-primary-violet)] via-[var(--color-indigo-start)] to-[var(--color-indigo-end)] text-white">
+        <footer className="mathco-hero-bg text-white">
           <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="lg:col-span-2">
-                <h3 className="text-[var(--color-accent-mint)] mathco-h3 mb-4 text-lg sm:text-xl">TheCollegeTech</h3>
+                <h3 className="text-[var(--color-accent-white)] mathco-h3 mb-4 text-lg sm:text-xl">TheCollegeTech</h3>
                 <p className="text-white/80 mathco-body max-w-md mb-4 sm:mb-6 text-sm sm:text-base">
                   Empowering educational institutions with innovative technology solutions for placements, learning management, and comprehensive IT services.
                 </p>
@@ -406,7 +406,7 @@ export default function Careers() {
               </div>
               
               <div>
-                <h4 className="text-[var(--color-accent-mint)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Solutions</h4>
+                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Solutions</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Placeeasy</a></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Vidya LMS</a></li>
@@ -415,7 +415,7 @@ export default function Careers() {
               </div>
               
               <div>
-                <h4 className="text-[var(--color-accent-mint)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
+                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">About Us</a></li>
                   <li><Link href="/careers" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Careers</Link></li>
@@ -429,7 +429,7 @@ export default function Careers() {
             <div className="border-t border-white/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <p className="text-white/60 mathco-body-sm text-xs sm:text-sm text-center md:text-left">&copy; 2025 TheCollegeTech. All rights reserved.</p>
               <div>
-                <p className="text-[var(--color-accent-mint)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
+                <p className="text-[var(--color-accent-white)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
               </div>
             </div>
           </div>

@@ -52,13 +52,7 @@ export default function Home() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
             <h2 className="text-[#ffffff] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 flex items-center">
-            <img 
-                src="/flag-of-india.webp" 
-                alt="TheCollegeTech Logo" 
-                className="ml-2 align-middle "
-                style={{ height: '1em', width: 'auto', display: 'inline-block', verticalAlign: 'middle' }} 
-              /> 
-              &nbsp;TheCollegeTech.
+            TheCollegeTech.
             </h2>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
@@ -428,7 +422,7 @@ export default function Home() {
                     Ready to revolutionize your educational technology? Contact us today to learn how our innovative solutions can benefit your institution and enhance student success.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center">
                   <a href="mailto:contact@thecollegetech.com?subject=Ready%20to%20Transform%20Our%20Institution%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
                     <span className="truncate">Get Started Today</span>
                   </a>
