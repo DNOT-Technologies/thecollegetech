@@ -248,7 +248,7 @@ export default function Careers() {
             </div>
 
             {/* Open Positions Section */}
-            <div id="open-positions" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container" style={{ backgroundColor: '#274C77', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+            <div id="open-positions" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container" style={{ backgroundImage: 'url(/bg-svg-1.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
                   Open Positions
@@ -259,7 +259,15 @@ export default function Careers() {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
                 {/* Position 1 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
+                <div className="p-6 sm:p-8 group hover:scale-105 transition-transform duration-300 relative" style={{ backgroundColor: 'transparent', borderLeft: '0.5px solid rgba(255, 255, 255, 1)', borderRight: '0.5px solid rgba(255, 255, 255, 1)', color: 'rgba(247, 247, 250, 1)' }}>
+                  {/* Top-left dot */}
+                  <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+                  {/* Bottom-left dot */}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+                  {/* Top-right dot */}
+                  <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+                  {/* Bottom-right dot */}
+                  <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Full Stack Developer</h3>
@@ -285,7 +293,15 @@ export default function Careers() {
                 </div>
 
                 {/* Position 2 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
+                <div className="p-6 sm:p-8 group hover:scale-105 transition-transform duration-300 relative" style={{ backgroundColor: 'transparent', borderLeft: '0.5px solid rgba(255, 255, 255, 1)', borderRight: '0.5px solid rgba(255, 255, 255, 1)', color: 'rgba(247, 247, 250, 1)' }}>
+                  {/* Top-left dot */}
+                  <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+                  {/* Bottom-left dot */}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+                  {/* Top-right dot */}
+                  <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+                  {/* Bottom-right dot */}
+                  <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>UI/UX Designer</h3>
@@ -308,7 +324,15 @@ export default function Careers() {
                 </div>
 
                 {/* Position 3 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
+                <div className="p-6 sm:p-8 group hover:scale-105 transition-transform duration-300 relative" style={{ backgroundColor: 'transparent', borderLeft: '0.5px solid rgba(255, 255, 255, 1)', borderRight: '0.5px solid rgba(255, 255, 255, 1)', color: 'rgba(247, 247, 250, 1)' }}>
+                  {/* Top-left dot */}
+                  <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+                  {/* Bottom-left dot */}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+                  {/* Top-right dot */}
+                  <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+                  {/* Bottom-right dot */}
+                  <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Product Manager</h3>
@@ -331,7 +355,15 @@ export default function Careers() {
                 </div>
 
                 {/* Position 4 */}
-                <div className="glass-card rounded-2xl p-6 sm:p-8 group hover:scale-105 transition-transform duration-300" style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)', border: '1px solid rgba(255, 255, 255, 0.2)', color: 'rgba(247, 247, 250, 1)' }}>
+                <div className="p-6 sm:p-8 group hover:scale-105 transition-transform duration-300 relative" style={{ backgroundColor: 'transparent', borderLeft: '0.5px solid rgba(255, 255, 255, 1)', borderRight: '0.5px solid rgba(255, 255, 255, 1)', color: 'rgba(247, 247, 250, 1)' }}>
+                  {/* Top-left dot */}
+                  <div style={{ position: 'absolute', top: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, -50%)' }}></div>
+                  {/* Bottom-left dot */}
+                  <div style={{ position: 'absolute', bottom: '0', left: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(-50%, 50%)' }}></div>
+                  {/* Top-right dot */}
+                  <div style={{ position: 'absolute', top: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, -50%)' }}></div>
+                  {/* Bottom-right dot */}
+                  <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <div className="flex flex-col h-full">
                     <div className="flex items-start justify-between mb-4">
                       <h3 className="mathco-h3 text-lg sm:text-xl pr-4" style={{ color: 'var(--color-neutral-light)' }}>Sales Representative</h3>
