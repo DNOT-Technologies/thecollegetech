@@ -287,7 +287,7 @@ export default function Home() {
         </div>
         
         {/* Testimonials Section - Full Width */}
-        <div className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundColor: '#274C77', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+        <div className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundImage: 'url(/bg-svg-2.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
           <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto px-4">
             <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
               We are redefining EdTech.
@@ -353,9 +353,9 @@ export default function Home() {
                       Connect students with companies and internships through our placement platform with ease.
                     </p>
                     <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Placeeasy&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Placeeasy%20and%20how%20it%20can%20help%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
@@ -380,9 +380,9 @@ export default function Home() {
                       Enhance learning experiences with our comprehensive learning management system featuring interactive content and analytics.
                     </p>
                     <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Vidya%20LMS&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Vidya%20LMS%20and%20how%20it%20can%20enhance%20our%20learning%20management." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
@@ -407,9 +407,9 @@ export default function Home() {
                       Comprehensive IT services including infrastructure management, cybersecurity, and 24/7 technical support for educational institutions.
                     </p>
                     <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20IT%20Services&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20IT%20Services%20and%20how%20they%20can%20support%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-teal)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
@@ -440,11 +440,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <footer className="bg-gradient-to-br from-[var(--color-primary-violet)] via-[var(--color-indigo-start)] to-[var(--color-indigo-end)] text-white">
+        
+        
+        
+        {/* Footer Section */}
+        <footer className="mathco-hero-bg text-white">
           <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <div className="lg:col-span-2">
-                <h3 className="text-[var(--color-accent-mint)] mathco-h3 mb-4 text-lg sm:text-xl">TheCollegeTech</h3>
+                <h3 className="text-[var(--color-accent-white)] mathco-h3 mb-4 text-lg sm:text-xl">TheCollegeTech</h3>
                 <p className="text-white/80 mathco-body max-w-md mb-4 sm:mb-6 text-sm sm:text-base">
                   Empowering educational institutions with innovative technology solutions for placements, learning management, and comprehensive IT services.
                 </p>
@@ -468,7 +472,7 @@ export default function Home() {
               </div>
               
               <div>
-                <h4 className="text-[var(--color-accent-mint)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Solutions</h4>
+                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Solutions</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Placeeasy</a></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Vidya LMS</a></li>
@@ -477,7 +481,7 @@ export default function Home() {
               </div>
               
               <div>
-                <h4 className="text-[var(--color-accent-mint)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
+                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
                 <ul className="space-y-2 sm:space-y-3">
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">About Us</a></li>
                   <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Contact</a></li>
@@ -490,7 +494,7 @@ export default function Home() {
             <div className="border-t border-white/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <p className="text-white/60 mathco-body-sm text-xs sm:text-sm text-center md:text-left">&copy; 2025 TheCollegeTech. All rights reserved.</p>
               <div>
-                <p className="text-[var(--color-accent-mint)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
+                <p className="text-[var(--color-accent-white)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
               </div>
             </div>
           </div>
