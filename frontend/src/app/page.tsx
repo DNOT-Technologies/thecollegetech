@@ -38,40 +38,48 @@ export default function Home() {
     <>
       {/* Fixed Navigation - Island style */}
       <div 
-        className="glass-nav rounded-2xl transition-transform duration-300 ease-in-out"
+        className="glass-nav transition-transform duration-300 ease-in-out"
         style={{ 
           position: 'fixed', 
-          top: '16px', 
-          left: '16px', 
-          right: '16px', 
+          top: '0px', 
+          left: '0px', 
+          right: '0px', 
           zIndex: 10000,
-          padding: '10px 20px',
+          padding: '20px 35px',
           transform: isNavVisible ? 'translateY(0)' : 'translateY(-120%)'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
-            <h2 className="text-[var(--color-primary-violet)] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</h2>
+            <h2 className="text-[#ffffff] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 flex items-center">
+            <img 
+                src="/flag-of-india.webp" 
+                alt="TheCollegeTech Logo" 
+                className="ml-2 align-middle "
+                style={{ height: '1em', width: 'auto', display: 'inline-block', verticalAlign: 'middle' }} 
+              /> 
+              &nbsp;TheCollegeTech.
+            </h2>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="#home">
+                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#home">
                   Home
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="#services">
+                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#services">
                   Services
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="#products">
+                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#products">
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/careers">
+                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="/careers">
                   Careers
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
+                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -145,46 +153,57 @@ export default function Home() {
         {/* Main content with layout container */}
         <div
           className="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-          style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
+          style={{ fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif' }}
         >
+          <div 
+            className="@[480px]:p-4 flex flex-col mb-[42px] text-left"
+            style={{
+              paddingTop: '0px',
+              paddingBottom: '40px',
+              paddingLeft: '0',
+              paddingRight: '0',
+              backgroundClip: 'unset',
+              WebkitBackgroundClip: 'unset',
+              color: 'rgba(247, 247, 250, 1)',
+              verticalAlign: 'bottom'
+            }}
+          >
+            <div className="@container">
+              <div id="home" className="mathco-hero-bg flex  flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 relative overflow-hidden " style={{ paddingTop: '129px', paddingBottom: '129px', marginTop: '0px', marginBottom: '0px', minHeight: '100vh' }}>
+                
+                <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl justify-center items-start mx-auto" style={{ marginTop: '8px', marginBottom: '8px', boxSizing: 'content-box' }}>
+                  <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-7xl font-medium leading-[1.1] tracking-tight flex flex-col justify-start items-start">
+                    Power your institution with seamless Management Systems and AI.
+                  </h1>
+                  <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
+                  At TheCollegeTech (TCT), we build education‑centric technologies built for Indian institutions to help them grow and succeed.
+                  </p>
+                  <a href="#services" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
+                    <span className="text-sm sm:text-base font-medium text-white">Get Free Trial</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                      <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
+                    </svg>
+                  </a>
+                </div>
+                
+                {/* Latest Updates Card - Commented Out */}
+                {/* 
+                <div className="hidden lg:block absolute bottom-8 right-8 glass-card rounded-2xl p-6 max-w-xs z-10">
+                  <div className="text-[var(--color-primary-violet)] text-xs font-semibold uppercase tracking-wider mb-2">
+                    LATEST UPDATES
+                  </div>
+                  <div className="text-[var(--color-primary-violet)] text-base font-medium">
+                    Top 50 Educational Technology Innovations
+                  </div>
+                  <div className="w-12 h-px bg-[var(--color-primary-violet)]/30 mt-4"></div>
+                </div>
+                */}
+              </div>
+            </div>
+          </div>
         <div className="layout-container flex h-full grow flex-col">
           <div className="flex flex-1 justify-center py-5 pt-16 sm:pt-18">
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1 mx-auto">
-            <div className="@container">
-              <div className="@[480px]:p-4">
-                <div id="home" className="mathco-hero-bg flex min-h-[80vh] sm:min-h-[90vh] flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 @[480px]:rounded-xl relative overflow-hidden">
-                  
-                  <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl">
-                    <h1 className="text-[var(--color-primary-violet)] text-3xl sm:text-5xl lg:text-7xl font-medium leading-[1.1] tracking-tight">
-                      Power your institution with seamless Management Systems, AI, and more.
-                    </h1>
-                    <p className="text-[var(--color-primary-violet)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                    At TheCollegeTech (TCT), we develop crucial, education‑centric technologies bridging gaps in India&apos;s education system, delivering
-                    intuitive, scalable solutions for institutions, educators, and employers.
-                    </p>
-                    <a href="#services" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
-                      <span className="text-sm sm:text-base font-medium">Learn more</span>
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                        <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
-                      </svg>
-                    </a>
-                  </div>
-                  
-                  {/* Latest Updates Card - Commented Out */}
-                  {/* 
-                  <div className="hidden lg:block absolute bottom-8 right-8 glass-card rounded-2xl p-6 max-w-xs z-10">
-                    <div className="text-[var(--color-primary-violet)] text-xs font-semibold uppercase tracking-wider mb-2">
-                      LATEST UPDATES
-                    </div>
-                    <div className="text-[var(--color-primary-violet)] text-base font-medium">
-                      Top 50 Educational Technology Innovations
-                    </div>
-                    <div className="w-12 h-px bg-[var(--color-primary-violet)]/30 mt-4"></div>
-                  </div>
-                  */}
-                </div>
-              </div>
-            </div>
             <div id="services" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
@@ -205,7 +224,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Integrated Solutions</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Our integrated platform seamlessly connects students with placement opportunities while providing a robust learning management system.
+                      Our integrated platforms seamlessly connects students with placement opportunities while providing a robust learning management system.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -263,44 +282,50 @@ export default function Home() {
               </div>
             </div>
             {/* Trusted by Leading Institutions Section - Commented Out */}
-            
-            {/* Testimonials Section */}
-            <div className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
-              <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
-                <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                  We are redefining EdTech.
-                </h1>
-                <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Hear from trusted people about their experience using Placeeasy and Viyda (Our best placement and learning management system).
+          </div>
+          </div>
+        </div>
+        
+        {/* Testimonials Section - Full Width */}
+        <div className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundColor: '#274C77', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+          <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto px-4">
+            <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
+              We are redefining EdTech.
+            </h1>
+            <p className="text-white mathco-body max-w-3xl mx-auto text-sm sm:text-base">
+              Hear from trusted people about their experience using Placeeasy and Viyda (Our best placement and learning management system).
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="glass-card rounded-2xl p-6 sm:p-8 relative">
+              
+              <div className="pt-6 sm:pt-8">
+                <p className="text-white mathco-body text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
+                  TheCollegeTech has the potential to revolutionize the on campus placement process and how students interact with their coursework. Their platforms are seamless and very user friendly.
                 </p>
-              </div>
-              <div className="max-w-4xl mx-auto">
-                <div className="glass-card rounded-2xl p-6 sm:p-8 relative">
-                  <div className="text-4xl sm:text-6xl text-[var(--color-primary-violet)]/20 absolute top-2 sm:top-4 left-4 sm:left-6">&quot;</div>
-                  <div className="pt-6 sm:pt-8">
-                    <p className="text-[var(--color-primary-violet)] mathco-body text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                      TheCollegeTech has the potential to revolutionize the on campus placement process and how students interact with their coursework. Their platforms are seamless and very user friendly.
-                    </p>
-                    <div className="flex items-center justify-center gap-4">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
-                        DR
-                      </div>
-                      <div className="text-left">
-                        <div className="font-semibold text-[var(--color-primary-violet)] mathco-h3 text-sm sm:text-base">Dr. Sita Devi Bharatula</div>
-                        <div className="text-[var(--color-neutral-dark)] mathco-body-sm text-xs sm:text-sm">Amrita Vishwa Vidyapeetham, Chennai</div>
-                      </div>
-                    </div>
+                <div className="flex items-center justify-center gap-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
+                    DR
                   </div>
-                </div>
-                
-                <div className="flex justify-center gap-2 mt-6 sm:mt-8">
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[var(--color-primary-violet)]"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[var(--color-primary-violet)]/30"></div>
-                  <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-[var(--color-primary-violet)]/30"></div>
+                  <div className="text-left">
+                    <div className="font-semibold text-white mathco-h3 text-sm sm:text-base">Dr. Sita Devi Bharatula</div>
+                    <div className="text-white/80 mathco-body-sm text-xs sm:text-sm">Amrita Vishwa Vidyapeetham, Chennai</div>
+                  </div>
                 </div>
               </div>
             </div>
             
+            {/* <div className="flex justify-center gap-2 mt-6 sm:mt-8">
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/30"></div>
+              <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/30"></div>
+            </div> */}
+          </div>
+        </div>
+        
+        <div className="layout-container flex h-full grow flex-col">
+          <div className="flex flex-1 justify-center py-5 pt-16 sm:pt-18">
+          <div className="layout-content-container flex flex-col max-w-[960px] flex-1 mx-auto">
             <div id="products" className="flex flex-col gap-8 sm:gap-12 px-4 py-12 sm:py-16 @container">
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">

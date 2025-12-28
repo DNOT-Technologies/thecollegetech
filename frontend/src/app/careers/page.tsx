@@ -47,7 +47,7 @@ export default function Careers() {
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
-            <Link href="/" className="text-[var(--color-primary-violet)] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech</Link>
+            <Link href="/" className="text-black text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech.</Link>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
@@ -141,7 +141,7 @@ export default function Careers() {
         {/* Main content with layout container */}
         <div
           className="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden"
-          style={{ fontFamily: 'Inter, "Noto Sans", sans-serif' }}
+          style={{ fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif' }}
         >
         <div className="layout-container flex h-full grow flex-col">
           <div className="flex flex-1 justify-center py-5 pt-16 sm:pt-18">
