@@ -13,6 +13,7 @@
   --color-neutral-light: #F7F7FA;
   --color-neutral-medium: #B4B9C9;
   --color-neutral-dark: #4F5160;
+  --color-primary-white: #FFFFFF;
   
   /* Gradients */
   --gradient-primary: linear-gradient(45deg, var(--color-primary-blue) 0%, var(--color-primary-lightblue) 100%);
