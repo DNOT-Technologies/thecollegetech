@@ -1,20 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Careers() {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDarkBackground, setIsDarkBackground] = useState(false);
+  const hasScrolledRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
+      // Mark that user has scrolled (allow observer to change colors after first scroll)
+      if (currentScrollY > 50) {
+        hasScrolledRef.current = true;
+      }
+      
       // Show nav when at top of page
       if (currentScrollY === 0) {
         setIsNavVisible(true);
+        // When at top, force dark text (light background)
+        setIsDarkBackground(false);
       }
       // Hide nav when scrolling down, show when scrolling up
       else if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -30,44 +39,134 @@ export default function Careers() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    // Sections with dark backgrounds (SVG/gradient backgrounds)
+    const darkSections = ['careers-hero', 'open-positions'];
+    
+    // Initial check - determine which section is at the navbar position
+    const checkInitialSection = () => {
+      // Navbar is fixed at top: 16px, so check what's behind the navbar center (around 45px from top)
+      const navbarCenterY = 45; // 16px top + ~29px (half of navbar height ~58px)
+      const sections = document.querySelectorAll('#careers-hero, #why-join-us, #open-positions, #contact-section');
+      let closestSectionId: string | null = null;
+      let maxCoverage = 0;
+      
+      sections.forEach((section) => {
+        const htmlSection = section as HTMLElement;
+        const rect = htmlSection.getBoundingClientRect();
+        // Check if navbar center position is within this section
+        if (rect.top <= navbarCenterY && rect.bottom >= navbarCenterY) {
+          // Calculate how much of the section covers the navbar area
+          const sectionTop = Math.max(rect.top, navbarCenterY - 30);
+          const sectionBottom = Math.min(rect.bottom, navbarCenterY + 30);
+          const coverage = sectionBottom - sectionTop;
+          
+          if (coverage > maxCoverage && htmlSection.id) {
+            maxCoverage = coverage;
+            closestSectionId = htmlSection.id;
+          }
+        }
+      });
+      
+      if (closestSectionId) {
+        setIsDarkBackground(darkSections.includes(closestSectionId));
+      } else {
+        // If no section found at navbar position (likely white background), default to light background (dark text)
+        setIsDarkBackground(false);
+      }
+    };
+
+    // Run initial check immediately and also after a short delay to ensure DOM is ready
+    checkInitialSection();
+    const timeoutId = setTimeout(() => {
+      checkInitialSection();
+    }, 100);
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-60px 0px 0px 0px', // Navbar is at ~60px from top when accounting for position
+      threshold: [0, 0.1, 0.5, 1]
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      // Only allow observer to change colors after user has scrolled past the top
+      // This prevents initial load from setting white text
+      if (!hasScrolledRef.current && window.scrollY < 50) {
+        return;
+      }
+      
+      // Find the section that has the most intersection at the navbar position
+      let maxIntersection = 0;
+      let mostVisibleSectionId: string | null = null;
+      
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > maxIntersection) {
+          const target = entry.target as HTMLElement;
+          if (target && target.id) {
+            maxIntersection = entry.intersectionRatio;
+            mostVisibleSectionId = target.id;
+          }
+        }
+      });
+      
+      // Only update if we found a section with significant intersection
+      if (mostVisibleSectionId && maxIntersection > 0.1) {
+        setIsDarkBackground(darkSections.includes(mostVisibleSectionId));
+      }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    // Delay observer start slightly to let initial check run first
+    const observerTimeoutId = setTimeout(() => {
+      const sections = document.querySelectorAll('#careers-hero, #why-join-us, #open-positions, #contact-section');
+      sections.forEach(section => observer.observe(section));
+    }, 150);
+
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(observerTimeoutId);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <>
       {/* Fixed Navigation - Island style */}
       <div 
-        className="glass-nav rounded-2xl transition-transform duration-300 ease-in-out"
+        className="glass-nav rounded-2xl transition-transform duration-300 ease-in-out py-2.5 px-4 sm:py-2.5 sm:px-5"
         style={{ 
           position: 'fixed', 
           top: '16px', 
           left: '16px', 
           right: '16px', 
           zIndex: 10000,
-          padding: '10px 20px',
           transform: isNavVisible ? 'translateY(0)' : 'translateY(-120%)'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
-            <Link href="/" className="text-black text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3">TheCollegeTech.</Link>
+            <Link href="/" className={`${isDarkBackground ? 'text-white' : 'text-[var(--color-primary-violet)]'} text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 transition-colors duration-300`}>TheCollegeTech.</Link>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
-                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/">
+                <Link className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/">
                   Home
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#services">
+                <Link className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/#services">
                   Services
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-                <Link className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="/#products">
+                <Link className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/#products">
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </Link>
-                <a className="text-[var(--color-primary-violet)] text-sm font-medium leading-normal relative group transition-colors duration-300" href="/careers">
+                <a className={`${isDarkBackground ? 'text-white hover:text-white' : 'text-[var(--color-primary-violet)] hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/careers">
                   Careers
                   <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-primary"></span>
                 </a>
-                <a className="text-[var(--color-primary-violet)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -81,9 +180,9 @@ export default function Careers() {
                 className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
                 aria-label="Toggle mobile menu"
               >
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
               </button>
             </div>
           </div>
@@ -148,7 +247,7 @@ export default function Careers() {
           <div className="layout-content-container flex flex-col max-w-[960px] flex-1 mx-auto">
             <div className="@container">
               <div className="@[480px]:p-4">
-                <div className="mathco-hero-bg flex min-h-[60vh] sm:min-h-[70vh] flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 @[480px]:rounded-xl relative overflow-hidden">
+                <div id="careers-hero" className="mathco-hero-bg flex min-h-[60vh] sm:min-h-[70vh] flex-col gap-6 sm:gap-8 items-start justify-center p-4 sm:p-8 lg:p-16 @[480px]:gap-12 @[480px]:rounded-xl relative overflow-hidden">
                   
                   <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl">
                     <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight">
@@ -169,7 +268,7 @@ export default function Careers() {
             </div>
             
             {/* Why Join Us Section */}
-            <div className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
+            <div id="why-join-us" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
                   Why Join TheCollegeTech?
@@ -388,7 +487,7 @@ export default function Careers() {
             </div>
 
             {/* Contact Section */}
-            <div className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
+            <div id="contact-section" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
               <div className="glass-card rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto text-center">
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">

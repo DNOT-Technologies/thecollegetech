@@ -8,6 +8,7 @@ export default function Home() {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDarkBackground, setIsDarkBackground] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +32,33 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+  useEffect(() => {
+    // Sections with dark backgrounds (SVG/gradient backgrounds)
+    const darkSections = ['home', 'testimonials'];
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '-100px 0px 0px 0px',
+      threshold: 0.5
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          setIsDarkBackground(darkSections.includes(sectionId));
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    const sections = document.querySelectorAll('#home, #services, #products, #testimonials');
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
 
 
 
@@ -38,42 +66,41 @@ export default function Home() {
     <>
       {/* Fixed Navigation - Island style */}
       <div 
-        className="glass-nav transition-transform duration-300 ease-in-out"
+        className="glass-nav transition-transform duration-300 ease-in-out py-2.5 px-4 sm:py-5 sm:px-9"
         style={{ 
           position: 'fixed', 
           top: '0px', 
           left: '0px', 
           right: '0px', 
           zIndex: 10000,
-          padding: '20px 35px',
           transform: isNavVisible ? 'translateY(0)' : 'translateY(-120%)'
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div className="flex items-center gap-2">  
-            <h2 className="text-[#ffffff] text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 flex items-center">
+            <h2 className={`${isDarkBackground ? 'text-white' : 'text-[var(--color-primary-violet)]'} text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 flex items-center transition-colors duration-300`}>
             TheCollegeTech.
             </h2>
           </div>
             <div className="flex flex-1 justify-end gap-3 sm:gap-6">
               <div className="hidden md:flex items-center gap-9">
-                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#home">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#home">
                   Home
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#services">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#services">
                   Services
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="#products">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#products">
                   Products
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="/careers">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/careers">
                   Careers
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
-                <a className="text-[var(--color-primary-white)]/80 text-sm font-medium leading-normal relative group transition-colors duration-300 hover:text-[var(--color-primary-white)]" href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
+                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
                   Contact
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
                 </a>
@@ -87,9 +114,9 @@ export default function Home() {
                 className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
                 aria-label="Toggle mobile menu"
               >
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`w-6 h-0.5 bg-[var(--color-primary-violet)] transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
               </button>
             </div>
           </div>
@@ -289,7 +316,7 @@ export default function Home() {
         </div>
         
         {/* Testimonials Section - Full Width */}
-        <div className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundImage: 'url(/bg-svg-2.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
+        <div id="testimonials" className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundImage: 'url(/bg-svg-2.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
           <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto px-4">
             <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
               We are redefining EdTech.
