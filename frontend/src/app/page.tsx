@@ -2,35 +2,12 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
-  const [isNavVisible, setIsNavVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkBackground, setIsDarkBackground] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Show nav when at top of page
-      if (currentScrollY === 0) {
-        setIsNavVisible(true);
-      }
-      // Hide nav when scrolling down, show when scrolling up
-      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsNavVisible(false);
-      } else if (currentScrollY < lastScrollY) {
-        setIsNavVisible(true);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
 
   useEffect(() => {
     // Sections with dark backgrounds (SVG/gradient backgrounds)
@@ -64,112 +41,7 @@ export default function Home() {
 
   return (
     <>
-      {/* Fixed Navigation - Island style */}
-      <div 
-        className="glass-nav transition-transform duration-300 ease-in-out py-2.5 px-4 sm:py-5 sm:px-9"
-        style={{ 
-          position: 'fixed', 
-          top: '0px', 
-          left: '0px', 
-          right: '0px', 
-          zIndex: 10000,
-          transform: isNavVisible ? 'translateY(0)' : 'translateY(-120%)'
-        }}
-      >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div className="flex items-center gap-2">  
-            <h2 className={`${isDarkBackground ? 'text-white' : 'text-[var(--color-primary-violet)]'} text-base sm:text-lg font-bold leading-tight tracking-[-0.015em] mathco-h3 flex items-center transition-colors duration-300`}>
-            TheCollegeTech.
-            </h2>
-          </div>
-            <div className="flex flex-1 justify-end gap-3 sm:gap-6">
-              <div className="hidden md:flex items-center gap-9">
-                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#home">
-                  Home
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#services">
-                  Services
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="#products">
-                  Products
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="/careers">
-                  Careers
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-                <a className={`${isDarkBackground ? 'text-white/80 hover:text-white' : 'text-[var(--color-primary-violet)]/80 hover:text-[var(--color-primary-violet)]'} text-sm font-medium leading-normal relative group transition-colors duration-300`} href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website">
-                  Contact
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-                </a>
-              </div>
-              <a href="mailto:contact@thecollegetech.com?subject=Get%20Started%20-%20TheCollegeTech%20Services" className="mathco-button-primary flex min-w-[60px] sm:min-w-[70px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-7 sm:h-9 px-2 sm:px-3 text-xs sm:text-sm font-bold leading-normal tracking-[0.015em]">
-                <span className="truncate">Get Started</span>
-              </a>
-              {/* Mobile Menu Button */}
-              <button 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden flex flex-col justify-center items-center w-8 h-8 relative z-50"
-                aria-label="Toggle mobile menu"
-              >
-                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`w-6 h-0.5 ${isDarkBackground ? 'bg-white' : 'bg-[var(--color-primary-violet)]'} transition-all duration-300 mt-1 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Mobile Menu Overlay */}
-        <div className={`md:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-          <div className={`absolute top-0 right-0 w-64 h-full bg-white/40 backdrop-blur-md shadow-2xl transform transition-transform duration-300 ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-            <div className="flex flex-col p-6 pt-20">
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
-                href="#home"
-              >
-                Home
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
-                href="#services"
-              >
-                Services
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
-                href="#products"
-              >
-                Products
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
-                href="/careers"
-              >
-                Careers
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-[var(--color-primary-violet)] text-lg font-medium py-3 border-b border-[var(--color-primary-violet)]/20 relative group transition-colors duration-300 hover:text-[var(--color-primary-violet)]" 
-                href="mailto:contact@thecollegetech.com?subject=Inquiry%20from%20TheCollegeTech%20Website"
-              >
-                Contact
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
-
-            </div>
-          </div>
-        </div>
+      <Navbar isDarkBackground={isDarkBackground} variant="fixed-top" />
         
         {/* Main content with layout container */}
         <div
@@ -475,68 +347,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-        
-        
-        
-        {/* Footer Section */}
-        <footer className="mathco-hero-bg text-white">
-          <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
-              <div className="lg:col-span-2">
-                <h3 className="text-[var(--color-accent-white)] mathco-h3 mb-4 text-lg sm:text-xl">TheCollegeTech</h3>
-                <p className="text-white/80 mathco-body max-w-md mb-4 sm:mb-6 text-sm sm:text-base">
-                  Empowering educational institutions with innovative technology solutions for placements, learning management, and comprehensive IT services.
-                </p>
-                <div className="flex gap-3 sm:gap-4">
-                  <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--color-accent-mint)] hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-5 sm:h-5">
-                      <path d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"></path>
-                    </svg>
-                  </a>
-                  <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--color-accent-mint)] hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-5 sm:h-5">
-                      <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0-16h24v63.63a88,88,0,1,1,16,0Z"></path>
-                    </svg>
-                  </a>
-                  <a href="#" className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[var(--color-accent-mint)] hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-5 sm:h-5">
-                      <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              
-              <div>
-                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Solutions</h4>
-                <ul className="space-y-2 sm:space-y-3">
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Placeeasy</a></li>
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Vidya LMS</a></li>
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">IT Services</a></li>
-                </ul>
-              </div>
-              
-              <div>
-                <h4 className="text-[var(--color-accent-white)] mathco-h3 mb-3 sm:mb-4 text-base sm:text-lg">Company</h4>
-                <ul className="space-y-2 sm:space-y-3">
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">About Us</a></li>
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Contact</a></li>
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Privacy Policy</a></li>
-                  <li><a href="#" className="text-white/80 mathco-body-sm hover:text-[var(--color-accent-mint)] transition-colors duration-300 text-sm">Terms of Service</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            <div className="border-t border-white/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
-              <p className="text-white/60 mathco-body-sm text-xs sm:text-sm text-center md:text-left">&copy; 2025 TheCollegeTech. All rights reserved.</p>
-              <div>
-                <p className="text-[var(--color-accent-white)] mathco-body-sm font-medium text-xs sm:text-sm text-center md:text-right">It&apos;s time for a change and we can make it happen.</p>
-              </div>
-            </div>
           </div>
-        </footer>
         </div>
         </div>
+        <Footer />
     </>
   );
 }
