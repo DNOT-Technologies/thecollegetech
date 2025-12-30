@@ -75,13 +75,13 @@ export default function Home() {
                   {/* Bottom-right dot */}
                   <div style={{ position: 'absolute', bottom: '0', right: '0', width: '6px', height: '6px', backgroundColor: 'rgba(255, 255, 255, 1)', transform: 'translate(50%, 50%)' }}></div>
                   <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-7xl font-medium leading-[1.1] tracking-tight flex flex-col justify-start items-start">
-                    Power your institution with seamless Management Systems and AI.
+                    Technology for Colleges. Talent for Companies.
                   </h1>
                   <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                  At TheCollegeTech (TCT), we build education‑centric technologies built for Indian institutions to help them grow and succeed.
+                  TheCollegeTech empowers educational institutions with Learning Management Systems and Placement Management platforms. For companies, we deliver top talent through our innovative hackathon-style recruitment process that assesses real skills through project-based challenges.
                   </p>
                   <a href="https://calendly.com/nikhiltirunagiri/30min?month=2025-12" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
-                    <span className="text-sm sm:text-base font-medium text-white">Get Free Trial</span>
+                    <span className="text-sm sm:text-base font-medium text-white">Curious to see how we can help you?</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
                     </svg>
@@ -112,7 +112,7 @@ export default function Home() {
                   Why Choose TheCollegeTech?
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  We offer a comprehensive suite of technology solutions designed to enhance the college experience for students, faculty, and administrators with cutting-edge innovation.
+                  We serve both educational institutions and companies, creating a powerful ecosystem where colleges get comprehensive technology solutions and companies find top talent through our unique hiring process.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -124,9 +124,9 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col gap-3">
-                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Integrated Solutions</h3>
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">For Educational Institutions</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Our integrated platforms seamlessly connects students with placement opportunities while providing a robust learning management system.
+                      Learning Management Systems, Placement Management with company partnerships, tailored IT solutions, and comprehensive training & support for your institution.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -146,9 +146,9 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col gap-3">
-                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Customizable Services</h3>
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">For Companies</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      We tailor our services to meet the unique needs of each institution, ensuring optimal performance and user satisfaction.
+                      Unique talent acquisition through hackathon-style assessments. We either hire directly for your company or shortlist top candidates from colleges you specify.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -168,9 +168,9 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex flex-col gap-3">
-                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Dedicated Support</h3>
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Bridge Between Institutions & Companies</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Our dedicated support team is available to assist with implementation, training, and ongoing maintenance.
+                      We connect colleges with companies, bringing hiring opportunities to students while helping companies find the best talent through our innovative assessment process.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -192,7 +192,7 @@ export default function Home() {
         <div id="testimonials" className="flex flex-col gap-8 sm:gap-10 py-12 sm:py-16" style={{ backgroundImage: 'url(/bg-svg-2.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
           <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto px-4">
             <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-              We are redefining EdTech.
+              We are redefining EdTech and Hiring Process.
             </h1>
             <p className="text-white mathco-body max-w-3xl mx-auto text-sm sm:text-base">
               Hear from trusted people about their experience using Placeeasy and Viyda (Our Placement and Learning Management System).
@@ -241,7 +241,7 @@ export default function Home() {
                   Our Products and Services
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Explore our flagship products and services designed to transform the educational landscape with cutting-edge technology and innovative solutions.
+                  Explore our comprehensive solutions for educational institutions and companies, designed to transform how colleges operate and how companies find talent.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -259,7 +259,7 @@ export default function Home() {
                   <div className="p-4 sm:p-6">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Placeeasy</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      Connect students with companies and internships through our placement platform with ease.
+                      Placement management platform with company partnerships. We bring companies to hire your students, manage applications, and track placements seamlessly.
                     </p>
                     <Link href="/placeeasy" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
@@ -307,22 +307,22 @@ export default function Home() {
                       style={{ backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZYkGTzwMejnXKfmpamJytFQK2oXwIYLYm_TsIX_b1tL3e9jE7u3kGiunOzWjmjnDWzDwYUoagcbRtVfOr4AMIv33WWqBaAhhGv2Jviu0kM5vYG-Mp4mHDw_TzXXvdzXbZTmqva6UDQE7fDWd2ck-Rm5wHYKB6D3gvXu7HQh1yggw0xmqU4DE7RruZtm3TsUq2XKxzZrGdS3ctx-y54CszX-qjEg0dx6GuHEiN7jWYGTqizAAbFC4CQwZyLXUkbMdx_q3sMeZQbNZJ')` }}
                     ></div>
                     <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-gradient-primary text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-                      IT Solutions
+                      Talent Acquisition
                     </div>
                   </div>
                   <div className="p-4 sm:p-6">
-                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">IT Services</h3>
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Talent Acquisition</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      Comprehensive IT services including infrastructure management, cybersecurity, and 24/7 technical support for educational institutions.
+                      unique recruitment process for companies. We create role-based projects, students record demos, and we shortlist the best candidates for your team.
                     </p>
-                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20IT%20Services&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20IT%20Services%20and%20how%20they%20can%20support%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
+                    <Link href="/services/for-companies" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -331,10 +331,10 @@ export default function Home() {
               <div className="glass-card rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto text-center">
                 <div className="flex flex-col gap-4 sm:gap-6">
                   <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                    Transform Your Institution with Right Technology
+                    Ready to Transform Your Institution or Find Great Talent?
                   </h1>
                   <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                    Ready to revolutionize your educational technology? Contact us today to learn how our innovative solutions can benefit your institution and enhance student success.
+                    Whether you&apos;re an educational institution looking for comprehensive technology solutions or a company seeking top talent through our innovative recruitment process, we&apos;re here to help. Contact us today to get started.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center">
