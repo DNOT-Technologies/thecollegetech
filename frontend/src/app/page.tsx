@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -260,14 +261,14 @@ export default function Home() {
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
                       Connect students with companies and internships through our placement platform with ease.
                     </p>
-                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Placeeasy&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Placeeasy%20and%20how%20it%20can%20help%20our%20institution." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
+                    <Link href="/placeeasy" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 
@@ -287,14 +288,14 @@ export default function Home() {
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
                       Enhance learning experiences with our comprehensive learning management system featuring interactive content and analytics.
                     </p>
-                    <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Vidya%20LMS&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20Vidya%20LMS%20and%20how%20it%20can%20enhance%20our%20learning%20management." className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
+                    <Link href="/vidya" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
                       <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
                         </svg>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 
