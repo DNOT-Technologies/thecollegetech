@@ -109,13 +109,13 @@ export default function ForCompanies() {
                   
                   <div className="flex flex-col gap-4 sm:gap-6 relative z-10 max-w-2xl">
                     <h1 className="text-[var(--color-primary-white)] text-3xl sm:text-5xl lg:text-6xl font-medium leading-[1.1] tracking-tight">
-                      Talent Acquisition for Companies
+                      Find Top Talent in Weeks, Not Months
                     </h1>
                     <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                      Find the best talent through our unique hackathon-style recruitment process. When you partner with us, we either hire directly for your company or shortlist top candidates from colleges of your choice using project-based assessments tailored to your roles.
+                      Through real skill assessments. Real projects. Real results. Right candidates. Stop manual processes, start smart hiring.
                     </p>
-                    <a href="#features-section" className="flex items-center gap-2 text-[var(--color-primary-white)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
-                      <span className="text-sm sm:text-base font-medium">Explore Services</span>
+                    <a href="#process-flow" className="flex items-center gap-2 text-[var(--color-primary-white)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
+                      <span className="text-sm sm:text-base font-medium">See how it works</span>
                       <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="group-hover:translate-x-1 transition-transform duration-300">
                         <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
                       </svg>
@@ -129,10 +129,10 @@ export default function ForCompanies() {
             <div id="overview" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                  Unique Talent Acquisition Process
+                  Two Options. One Goal. Best Talent.
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  When companies partner with us, we provide two options: direct hiring for your company or candidate shortlisting from colleges you specify. Our innovative hackathon-style assessment process ensures you get the best talent matched to your specific roles and projects.
+                  Direct hiring for your company or candidate shortlisting from colleges you specify. Real skill assessments through project-based challenges.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -204,14 +204,114 @@ export default function ForCompanies() {
               </div>
             </div>
 
+            {/* Process Flow Section */}
+            <div id="process-flow" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container">
+              <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
+                <h1 className="text-[var(--color-primary-violet)] mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
+                  How It Works
+                </h1>
+                <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
+                  Simple 4-step process to find the right talent
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
+                {/* Step 1 */}
+                <div className="glass-card rounded-2xl flex flex-col gap-4 p-4 sm:p-6 group relative">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-sm">
+                    1
+                  </div>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-6 sm:h-6">
+                      <path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,160H40V56H216V200ZM184,96a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,96Zm0,32a8,8,0,0,1-8,8H80a8,8,0,0,1,0-16h96A8,8,0,0,1,184,128Z"></path>
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg font-bold">Create Role</h3>
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
+                      You provide role requirements or project specifications
+                    </p>
+                  </div>
+                  <div className="hidden lg:block absolute top-1/2 -right-3 transform translate-x-full -translate-y-1/2 z-10">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--color-primary-violet)]/40">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="glass-card rounded-2xl flex flex-col gap-4 p-4 sm:p-6 group relative">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-sm">
+                    2
+                  </div>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-6 sm:h-6">
+                      <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path>
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg font-bold">Students Build</h3>
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
+                      Students work on hackathon-style projects tailored to your role
+                    </p>
+                  </div>
+                  <div className="hidden lg:block absolute top-1/2 -right-3 transform translate-x-full -translate-y-1/2 z-10">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--color-primary-violet)]/40">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="glass-card rounded-2xl flex flex-col gap-4 p-4 sm:p-6 group relative">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-sm">
+                    3
+                  </div>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-6 sm:h-6">
+                      <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg font-bold">Demo Submitted</h3>
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
+                      Students record demos showcasing their solutions and capabilities
+                    </p>
+                  </div>
+                  <div className="hidden lg:block absolute top-1/2 -right-3 transform translate-x-full -translate-y-1/2 z-10">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-[var(--color-primary-violet)]/40">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Step 4 */}
+                <div className="glass-card rounded-2xl flex flex-col gap-4 p-4 sm:p-6 group">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-white font-bold text-sm">
+                    4
+                  </div>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256" className="sm:w-6 sm:h-6">
+                      <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"></path>
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg font-bold">Top Talent Shortlisted</h3>
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
+                      We audit submissions and shortlist the best candidates for your role
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Features Section with Dark Background */}
             <div id="features-section" className="flex flex-col gap-8 sm:gap-10 px-4 py-12 sm:py-16 @container" style={{ backgroundImage: 'url(/bg-svg-1.svg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginRight: 'calc(-50vw + 50%)' }}>
               <div className="flex flex-col gap-4 sm:gap-6 text-center max-w-4xl mx-auto">
                 <h1 className="text-white mathco-h2 text-2xl sm:text-3xl lg:text-4xl">
-                  How Our Talent Acquisition Works
+                  Real Projects. Real Results. Right Candidates.
                 </h1>
                 <p className="text-white/80 mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Our innovative hackathon-style recruitment process ensures you find the perfect candidates through practical, role-specific assessments that showcase real skills and capabilities.
+                  Practical, role-specific assessments that showcase real skills and capabilities.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
@@ -281,15 +381,15 @@ export default function ForCompanies() {
                     Ready to Find Your Next Great Hire?
                   </h1>
                   <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                    Partner with us to access top talent through our innovative hackathon-style recruitment process. Let&apos;s discuss how we can help you find the perfect candidates for your team. Get in touch to schedule a consultation.
+                    Find top talent in weeks, not months. Partner with us today.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center items-center">
                   <a href="mailto:contact@thecollegetech.com?subject=Inquiry%20about%20Services%20for%20Companies&body=Hi,%0A%0AI%20would%20like%20to%20learn%20more%20about%20your%20services%20for%20companies%20and%20how%20they%20can%20benefit%20our%20business." className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
-                    <span className="truncate">Get Started</span>
+                    <span className="truncate">Start smart hiring</span>
                   </a>
                   <a href="https://calendly.com/nikhiltirunagiri/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-[var(--color-primary-violet)] text-[var(--color-primary-violet)] hover:bg-[var(--color-primary-violet)] hover:text-white transition-all duration-300 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
-                    <span className="truncate">Schedule Demo</span>
+                    <span className="truncate">See how it works</span>
                   </a>
                 </div>
               </div>

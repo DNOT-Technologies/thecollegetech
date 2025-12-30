@@ -112,7 +112,7 @@ export default function ForEducationalInstitution() {
                       Solutions for Educational Institutions
                     </h1>
                     <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                      Empower your institution with our Learning Management System, Placement Management platform with company partnerships, and tailored IT solutions. We bring companies to hire your students and provide comprehensive support for your technology needs.
+                      Empower your institution with our Learning Management System, Placement Management platform with company partnerships, and tailored IT solutions. We bring companies to hire your students and provide the support you need for your needs.
                     </p>
                     <a href="#features-section" className="flex items-center gap-2 text-[var(--color-primary-white)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8 group">
                       <span className="text-sm sm:text-base font-medium">Explore Services</span>
@@ -132,7 +132,7 @@ export default function ForEducationalInstitution() {
                   Complete Educational Technology Solutions
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  We provide comprehensive technology solutions tailored for educational institutions. Our Learning Management System, Placement Management platform with company partnerships, and custom IT solutions help you enhance learning, streamline operations, and connect students with career opportunities.
+                  We provide technology solutions tailored for educational institutions. Our Learning Management System, Placement Management platform with company partnerships, and custom IT solutions help you enhance learning, streamline operations, and connect students with career opportunities.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -146,7 +146,7 @@ export default function ForEducationalInstitution() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Learning Management System</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Our comprehensive LMS platform enables seamless course delivery, student tracking, assessments, and collaborative learning. Manage your entire educational ecosystem in one powerful system.
+                      Our LMS platform enables seamless course delivery, student tracking, assessments, and collaborative learning. Manage your entire educational ecosystem in one powerful system.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -211,7 +211,7 @@ export default function ForEducationalInstitution() {
                   Our Services for Educational Institutions
                 </h1>
                 <p className="text-white/80 mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Discover comprehensive technology solutions designed to transform your educational institution and enhance the learning experience for students and faculty.
+                  Discover seamless technology solutions designed to transform your educational institution and enhance the learning experience for students and faculty.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">

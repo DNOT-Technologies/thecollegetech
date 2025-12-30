@@ -78,10 +78,10 @@ export default function Home() {
                     Technology for Colleges. Talent for Companies.
                   </h1>
                   <p className="text-[var(--color-primary-white)]/80 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-xl">
-                  TheCollegeTech empowers educational institutions with Learning Management Systems and Placement Management platforms. For companies, we deliver top talent through our innovative hackathon-style recruitment process that assesses real skills through project-based challenges.
+                  Automate placement management and save months of coordination time. Turn students into job-ready candidates before they graduate. Companies find top talent in weeks, not months — through real skill assessments that showcase actual capabilities.
                   </p>
                   <a href="https://calendly.com/nikhiltirunagiri/30min?month=2025-12" className="flex items-center gap-2 text-[var(--color-primary-violet)] cursor-pointer hover:gap-3 transition-all duration-300 mb-6 sm:mb-8">
-                    <span className="text-sm sm:text-base font-medium text-white">Curious to see how we can help you?</span>
+                    <span className="text-sm sm:text-base font-medium text-white">See how it works</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                       <path d="M3.33333 8H12.6667M12.6667 8L8 3.33334M12.6667 8L8 12.6667"/>
                     </svg>
@@ -112,7 +112,7 @@ export default function Home() {
                   Why Choose TheCollegeTech?
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  We serve both educational institutions and companies, creating a powerful ecosystem where colleges get comprehensive technology solutions and companies find top talent through our unique hiring process.
+                  Save 60% time on placement coordination. Partner with 50+ companies. 300+ students placed in 2024.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
@@ -126,7 +126,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">For Educational Institutions</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Learning Management Systems, Placement Management with company partnerships, tailored IT solutions, and comprehensive training & support for your institution.
+                      Automate placement management, save months of coordination time. Turn students into job-ready candidates before they graduate.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -148,7 +148,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">For Companies</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      Unique talent acquisition through hackathon-style assessments. We either hire directly for your company or shortlist top candidates from colleges you specify.
+                      Find top talent in weeks, not months — through real skill assessments. Real projects. Real results. Right candidates.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -170,7 +170,7 @@ export default function Home() {
                   <div className="flex flex-col gap-3">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-base sm:text-lg">Bridge Between Institutions & Companies</h3>
                     <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm text-sm">
-                      We connect colleges with companies, bringing hiring opportunities to students while helping companies find the best talent through our innovative assessment process.
+                      Join 20+ institutions. Partner with 50+ companies. Connect students with real opportunities.
                     </p>
                   </div>
                   <div className="mt-auto">
@@ -241,7 +241,7 @@ export default function Home() {
                   Our Products and Services
                 </h1>
                 <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                  Explore our comprehensive solutions for educational institutions and companies, designed to transform how colleges operate and how companies find talent.
+                  Solutions that transform how colleges operate and how companies find talent.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
@@ -258,11 +258,14 @@ export default function Home() {
                   </div>
                   <div className="p-4 sm:p-6">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Placeeasy</h3>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      Placement management platform with company partnerships. We bring companies to hire your students, manage applications, and track placements seamlessly.
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-2 text-sm font-semibold">
+                      Manage 100+ applications. Zero paperwork.
+                    </p>
+                    <p className="text-[var(--color-primary-violet)]/60 mathco-body-sm mb-4 text-xs">
+                      Placement management with company partnerships. Track placements seamlessly.
                     </p>
                     <Link href="/placeeasy" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">See how it works</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
@@ -285,11 +288,14 @@ export default function Home() {
                   </div>
                   <div className="p-4 sm:p-6">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Vidya LMS</h3>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      Enhance learning experiences with our comprehensive learning management system featuring interactive content and analytics.
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-2 text-sm font-semibold">
+                      Track learning. Boost outcomes. Simple dashboard.
+                    </p>
+                    <p className="text-[var(--color-primary-violet)]/60 mathco-body-sm mb-4 text-xs">
+                      Comprehensive learning management system with interactive content and analytics.
                     </p>
                     <Link href="/vidya" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">See how it works</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
@@ -312,11 +318,14 @@ export default function Home() {
                   </div>
                   <div className="p-4 sm:p-6">
                     <h3 className="text-[var(--color-primary-violet)] mathco-h3 text-lg sm:text-xl mb-3">Talent Acquisition</h3>
-                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-4 text-sm">
-                      unique recruitment process for companies. We create role-based projects, students record demos, and we shortlist the best candidates for your team.
+                    <p className="text-[var(--color-primary-violet)]/80 mathco-body-sm mb-2 text-sm font-semibold">
+                      Real projects. Real results. Right candidates.
+                    </p>
+                    <p className="text-[var(--color-primary-violet)]/60 mathco-body-sm mb-4 text-xs">
+                      Find top talent in weeks through role-based projects and real skill assessments.
                     </p>
                     <Link href="/services/for-companies" className="flex items-center justify-between group-hover:text-[var(--color-primary-violet)] transition-colors duration-300">
-                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">Learn More</span>
+                      <span className="text-[var(--color-black)] text-xs sm:text-sm font-medium">See how it works</span>
                       <div className="w-5 h-5 sm:w-6 sm:h-6 text-[var(--color-teal)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <svg viewBox="0 0 24 24" fill="black">
                           <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18L8.59 16.59Z"/>
@@ -334,15 +343,15 @@ export default function Home() {
                     Ready to Transform Your Institution or Find Great Talent?
                   </h1>
                   <p className="text-[var(--color-neutral-dark)] mathco-body max-w-3xl mx-auto text-sm sm:text-base">
-                    Whether you&apos;re an educational institution looking for comprehensive technology solutions or a company seeking top talent through our innovative recruitment process, we&apos;re here to help. Contact us today to get started.
+                    Join 20+ institutions. Partner with 50+ companies. Start automating today.
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center">
                   <a href="mailto:contact@thecollegetech.com?subject=Ready%20to%20Transform%20Our%20Institution%20-%20TheCollegeTech" className="mathco-button-primary flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
-                    <span className="truncate">Get Started Today</span>
+                    <span className="truncate">Start automating today</span>
                   </a>
                   <a href="https://calendly.com/nikhiltirunagiri/30min" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-[var(--color-primary-violet)] text-[var(--color-primary-violet)] hover:bg-[var(--color-primary-violet)] hover:text-white transition-all duration-300 flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-11 sm:h-12 px-4 sm:px-6 text-sm sm:text-base font-bold leading-normal tracking-[0.015em]">
-                    <span className="truncate">Schedule Demo</span>
+                    <span className="truncate">See how it works</span>
                   </a>
                 </div>
               </div>
